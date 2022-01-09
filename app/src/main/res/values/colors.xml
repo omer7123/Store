@@ -13,4 +13,5 @@
     <color name="label_black_30">#4D12121D</color>
     <color name="regular_gray">#3F3F3F</color>
     <color name="hyperlink">#2566AF</color>
+    <color name="black_with_alfa">#8A12121D</color>
 </resources>

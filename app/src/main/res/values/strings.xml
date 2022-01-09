@@ -11,4 +11,7 @@
     <string name="or">или</string>
     <string name="got_account">Уже есть аккаунт?</string>
     <string name="enter">Войти</string>
+    <string name="register">Регистрация</string>
+    <string name="store_caps">Магазин кепок</string>
+    <string name="sign_in">Войти</string>
 </resources>

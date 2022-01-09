@@ -30,5 +30,12 @@
     <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_71">71dp</dimen>
     <dimen name="margin_91">91dp</dimen>
+    <dimen name="margin_21">21dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+
 
 </resources>
