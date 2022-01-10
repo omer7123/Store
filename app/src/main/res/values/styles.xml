@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="top_tv_large">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/margin_30</item>
+        <item name="android:fontFamily">@font/sf_ui_display_bold</item>
+        <item name="android:textColor">@color/label_black_100</item>
+        <item name="android:textSize">@dimen/size_28</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_height">@dimen/margin_1</item>
+        <item name="android:background">@color/label_black_30</item>
+    </style>
+
+    <style name="et_signup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_56</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">30dp</item>
+        <item name="android:drawablePadding">@dimen/margin_20</item>
+        <item name="android:fontFamily">@font/sf_ui_text_regular</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/size_16</item>
+    </style>
+
+    <style name="btn_signup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_56</item>
+        <item name="android:background">@drawable/bg_btn_inactive</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/label_black_30</item>
+        <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
