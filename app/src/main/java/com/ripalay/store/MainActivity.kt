@@ -1,11 +1,14 @@
 package com.ripalay.store
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.view.LayoutInflater
+import com.ripalay.store.core.ui.BaseActivity
+import com.ripalay.store.databinding.ActivityMainBinding
+import com.ripalay.youtubeapi.core.ui.BaseViewModel
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
+
+    override fun inflateVB(inflater: LayoutInflater): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
     }
+
 }

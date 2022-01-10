@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="size_28">28sp</dimen>
     <dimen name="size_20">20sp</dimen>
     <dimen name="size_36">36sp</dimen>
     <dimen name="size_16">16sp</dimen>
     <dimen name="size_14">14sp</dimen>
     <dimen name="size_10">10sp</dimen>
-
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_23">23dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_56">56dp</dimen>
+    <dimen name="margin_77">77dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_83">83dp</dimen>
+    <dimen name="margin_66">66dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_118">118dp</dimen>
+    <dimen name="margin_52">52dp</dimen>
+    <dimen name="margin_38">38dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+    <dimen name="margin_46">46dp</dimen>
+    <dimen name="margin_42">42dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_71">71dp</dimen>
+    <dimen name="margin_91">91dp</dimen>
 
 </resources>

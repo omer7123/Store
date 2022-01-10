@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_gray">#F3F3F3</color>
     <color name="yellow">#FDDB16</color>
+    <color name="label_black_100">#12121D</color>
+    <color name="label_black_30">#4D12121D</color>
+    <color name="regular_gray">#3F3F3F</color>
+    <color name="hyperlink">#2566AF</color>
 </resources>

@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Store</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signup">Регистрация</string>
+    <string name="signup_et_name">Имя</string>
+    <string name="signup_et_phone">Номер телефона</string>
+    <string name="signup_et_password">Пароль</string>
+    <string name="signup_et_password2">Подтвердите пароль</string>
+    <string name="or">или</string>
+    <string name="got_account">Уже есть аккаунт?</string>
+    <string name="enter">Войти</string>
 </resources>

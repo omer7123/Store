@@ -1,4 +1,4 @@
-package com.ripalay.youtubeapi.core.network.result
+package com.ripalay.store.core.network.result
 
 class Resource {
     data class Resource<T>(val status: Status, val data: T?, val message: String?, val code: Int?) {

@@ -1,7 +1,7 @@
-package com.ripalay.youtubeapi.core.network
+package com.ripalay.store.core.network
 
-import com.ripalay.youtubeapi.BuildConfig.BASE_URL
-import com.ripalay.youtubeapi.data.remote.YoutubeApi
+import com.ripalay.store.BuildConfig.BASE_URL
+import com.ripalay.store.data.StoreApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 
 class RetrofitClient {
     companion object{
-        fun create(): YoutubeApi {
+        fun create(): StoreApi {
             val interceptor = HttpLoggingInterceptor()
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -26,7 +26,7 @@ class RetrofitClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL)
                 .build()
-            return retrofitClient.create(YoutubeApi::class.java)
+            return retrofitClient.create(StoreApi::class.java)
 
 
         }

@@ -1,4 +1,4 @@
-package com.ripalay.youtubeapi.core.network.result
+package com.ripalay.store.core.network.result
 
 enum class Status {
     SUCCESS,
