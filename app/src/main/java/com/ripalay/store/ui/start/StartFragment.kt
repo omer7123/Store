@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.ripalay.store.R
 import com.ripalay.store.databinding.FragmentStartBinding
-import com.ripalay.store.ui.registration.SignUpFragment
 
 class StartFragment : Fragment() {
     private lateinit var binding: FragmentStartBinding
@@ -33,6 +31,9 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.registerBtn.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
+        }
+        binding.signInBtn.setOnClickListener {
+            navController.navigate(R.id.signInFragment)
         }
     }
 }

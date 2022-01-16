@@ -10,8 +10,10 @@
     <string name="signup_et_password2">Подтвердите пароль</string>
     <string name="or">или</string>
     <string name="got_account">Уже есть аккаунт?</string>
-    <string name="enter">Войти</string>
+    <string name="sign_in">Войти</string>
     <string name="register">Регистрация</string>
     <string name="store_caps">Магазин кепок</string>
-    <string name="sign_in">Войти</string>
+    <string name="not_signed_up_yet">Еще не зарегистрированы?</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="restore">Восстановить</string>
 </resources>

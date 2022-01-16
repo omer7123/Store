@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.sign_up.SignUpFragment">
+        tools:context=".ui.sign_in.SignInFragment">
 
         <ImageView
             android:id="@+id/iv_logo"
@@ -23,7 +23,7 @@
             style="@style/top_tv_large"
             android:layout_below="@id/iv_logo"
             android:layout_marginTop="@dimen/margin_38"
-            android:text="@string/signup" />
+            android:text="@string/sign_in" />
 
         <View
             android:id="@+id/divider"
@@ -34,22 +34,10 @@
             android:layout_marginTop="@dimen/margin_40" />
 
         <EditText
-            android:id="@+id/et_signup_name"
+            android:id="@+id/et_sign_in_phone"
             style="@style/et_signup"
             android:layout_below="@id/divider"
             android:layout_marginTop="@dimen/margin_28"
-            android:autofillHints="username"
-            android:drawableStart="@drawable/ic_user"
-            android:hint="@string/signup_et_name"
-            android:inputType="textCapCharacters"
-            android:textColor="@color/label_black_100"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/et_signup_phone"
-            style="@style/et_signup"
-            android:layout_below="@id/et_signup_name"
-            android:layout_marginTop="@dimen/margin_10"
             android:autofillHints="phone"
             android:drawableStart="@drawable/ic_phone"
             android:hint="@string/signup_et_phone"
@@ -59,9 +47,9 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/et_signup_password"
+            android:id="@+id/et_sign_in_password"
             style="@style/et_signup"
-            android:layout_below="@id/et_signup_phone"
+            android:layout_below="@id/et_sign_in_phone"
             android:layout_marginTop="@dimen/margin_10"
             android:autofillHints="password"
             android:drawableStart="@drawable/ic_password"
@@ -70,68 +58,89 @@
             android:textColor="@color/label_black_100"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/et_signup_confirm_pass"
-            style="@style/et_signup"
-            android:layout_below="@id/et_signup_password"
-            android:layout_marginTop="@dimen/margin_10"
-            android:autofillHints="password"
-            android:drawableStart="@drawable/ic_password"
-            android:hint="@string/signup_et_password2"
-            android:inputType="textPassword"
-            android:textColor="@color/label_black_100"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:id="@+id/lin_layout_1"
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/margin_30"
-            android:visibility="gone"
-            android:layout_below="@id/et_signup_confirm_pass"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:layout_marginHorizontal="@dimen/margin_91"
-            android:orientation="horizontal" >
+            android:layout_below="@id/et_sign_in_password"
+            android:layout_marginHorizontal="@dimen/margin_33"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/got_account"
+                android:layout_weight="1"
+                android:text="@string/not_signed_up_yet"
                 android:textAlignment="textStart"
-                android:layout_weight="1"
                 android:textColor="@color/regular_gray"
-                android:textSize="@dimen/size_14"
-                />
+                android:textSize="@dimen/size_14" />
 
             <TextView
-                android:id="@+id/tv_enter"
-                android:text="@string/sign_in"
-                android:textAlignment="textEnd"
-                android:layout_weight="1"
-                android:textSize="@dimen/size_14"
-                android:clickable="true"
-                android:autoLink="all"
-                android:linksClickable="true"
-                android:textColor="@color/hyperlink"
+                android:id="@+id/tv_sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:focusable="true" />
+                android:layout_weight="1"
+                android:autoLink="all"
+                android:clickable="true"
+                android:focusable="true"
+                android:linksClickable="true"
+                android:text="@string/signup"
+                android:textAlignment="textEnd"
+                android:textColor="@color/hyperlink"
+                android:textSize="@dimen/size_14" />
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_signup"
-            style="@style/btn_light"
-            android:layout_below="@id/lin_layout_1"
-            android:layout_marginHorizontal="@dimen/margin_77"
-            android:layout_marginTop="@dimen/margin_45"
-            android:text="@string/signup" />
 
         <LinearLayout
             android:id="@+id/lin_layout_2"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lin_layout_1"
+            android:layout_marginHorizontal="@dimen/margin_33"
+            android:layout_marginTop="@dimen/margin_26"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/forgot_password"
+                android:textAlignment="textStart"
+                android:textColor="@color/regular_gray"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:id="@+id/tv_restore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autoLink="all"
+                android:clickable="true"
+                android:focusable="true"
+                android:linksClickable="true"
+                android:text="@string/restore"
+                android:textAlignment="textEnd"
+                android:textColor="@color/hyperlink"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            style="@style/btn_light"
+            android:layout_below="@id/lin_layout_2"
+            android:layout_marginHorizontal="@dimen/margin_77"
+            android:layout_marginTop="@dimen/margin_96"
+            android:text="@string/sign_in" />
+
+        <LinearLayout
+            android:id="@+id/lin_layout_3"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/margin_24"
-            android:layout_below="@id/btn_signup"
+            android:layout_below="@id/btn_sign_in"
             android:layout_marginHorizontal="@dimen/margin_52"
             android:layout_marginTop="@dimen/margin_46"
             android:orientation="horizontal"
@@ -161,10 +170,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lin_layout_3"
+            android:id="@+id/lin_layout_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lin_layout_2"
+            android:layout_below="@id/lin_layout_3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_42"
             android:orientation="horizontal">

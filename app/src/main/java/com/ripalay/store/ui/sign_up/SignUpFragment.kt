@@ -1,4 +1,4 @@
-package com.ripalay.store.ui.registration
+package com.ripalay.store.ui.sign_up
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,11 +13,15 @@ import android.widget.EditText
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.ripalay.store.R
 
 class SignUpFragment : Fragment() {
 
     private lateinit var binding: FragmentSignUpBinding
+    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +29,11 @@ class SignUpFragment : Fragment() {
     ): View {
         binding = FragmentSignUpBinding.inflate(layoutInflater)
         return binding.root
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        navController = findNavController()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,6 +45,9 @@ class SignUpFragment : Fragment() {
         textWatcher(binding.etSignupPassword, R.drawable.ic_password, R.drawable.ic_password_selected)
         lastTextWatcher()
 
+        binding.tvEnter.setOnClickListener {
+            navController.navigate(R.id.signInFragment)
+        }
     }
 
     private fun textWatcher(et: EditText, ic: Int, ic2: Int) {
