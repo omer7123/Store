@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.password_recovery.PasswordRecoveryFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.EnterTokenFragment">
 
     <ImageView
         android:id="@+id/custom_caps"
+        android:layout_marginTop="@dimen/margin_46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_46"
         android:src="@drawable/ic_custom_caps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/title_tv"
         style="@style/top_tv_large"
@@ -26,29 +25,35 @@
         app:layout_constraintTop_toBottomOf="@id/custom_caps" />
 
     <EditText
-        android:id="@+id/number_et"
+        android:id="@+id/token_et"
+        android:inputType="number"
+        android:layout_marginHorizontal="@dimen/margin_45"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        android:layout_marginTop="@dimen/margin_118"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_30"
-        android:layout_marginTop="@dimen/margin_42"
-        android:hint="@string/number_test"
-        android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/title_tv" />
+        android:layout_height="wrap_content"/>
 
     <TextView
-        style="@style/instrutcion_tv"
-        android:layout_marginTop="@dimen/margin_10"
-        android:text="@string/text_in_password_recovery"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/number_et" />
-
+        android:fontFamily="@font/sf_ui_text_regular"
+        android:textSize="@dimen/size_14"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
+        android:layout_marginHorizontal="@dimen/margin_30"
+        app:layout_constraintTop_toBottomOf="@id/token_et"
+        android:text="@string/instruction_for_token"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute" />
     <Button
         android:id="@+id/send_btn"
         style="@style/btn_light"
         android:layout_marginHorizontal="@dimen/margin_77"
         android:layout_marginBottom="68dp"
-        android:text="@string/send"
+        android:text="@string/password_recovery"
+        android:fontFamily="@font/sf_ui_text_regular"
+        android:textFontWeight="700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

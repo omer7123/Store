@@ -1,4 +1,4 @@
-package com.ripalay.store.ui.password_recovery
+package com.ripalay.store.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,18 +10,18 @@ import androidx.core.widget.addTextChangedListener
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.ripalay.store.R
-import com.ripalay.store.databinding.FragmentPasswordRecoveryBinding
-import com.ripalay.store.databinding.FragmentStartBinding
+import com.ripalay.store.databinding.FragmentEnterTokenBinding
+import com.ripalay.store.databinding.FragmentSignInBinding
 
-class PasswordRecoveryFragment : Fragment() {
-    private lateinit var binding: FragmentPasswordRecoveryBinding
+class EnterTokenFragment : Fragment() {
+    private lateinit var binding: FragmentEnterTokenBinding
     private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentPasswordRecoveryBinding.inflate(layoutInflater)
+    ): View {
+        binding = FragmentEnterTokenBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -32,10 +32,11 @@ class PasswordRecoveryFragment : Fragment() {
         initListener()
     }
 
+
     private fun initEditText() {
         binding.sendBtn.isEnabled = false
-        binding.numberEt.addTextChangedListener {
-            if (it.toString().isNotEmpty()) {
+        binding.tokenEt.addTextChangedListener {
+            if (it.toString().length == 6) {
                 binding.sendBtn.setBackgroundResource(R.drawable.bg_btn_active)
                 binding.sendBtn.setTextColor(
                     ContextCompat.getColor(
@@ -59,8 +60,7 @@ class PasswordRecoveryFragment : Fragment() {
 
     private fun initListener() {
         binding.sendBtn.setOnClickListener {
-            navController.navigate(R.id.enterTokenFragment)
+            navController.navigate(R.id.createNewPasswordFragment)
         }
     }
-
 }

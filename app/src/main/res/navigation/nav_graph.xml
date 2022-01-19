@@ -25,4 +25,14 @@
         android:name="com.ripalay.store.ui.password_recovery.PasswordRecoveryFragment"
         android:label="fragment_password_recovery"
         tools:layout="@layout/fragment_password_recovery" />
+    <fragment
+        android:id="@+id/enterTokenFragment"
+        android:name="com.ripalay.store.ui.EnterTokenFragment"
+        android:label="fragment_enter_token"
+        tools:layout="@layout/fragment_enter_token" />
+    <fragment
+        android:id="@+id/createNewPasswordFragment"
+        android:name="com.ripalay.store.ui.CreateNewPasswordFragment"
+        android:label="fragment_create_new_password"
+        tools:layout="@layout/fragment_create_new_password" />
 </navigation>

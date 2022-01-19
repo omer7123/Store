@@ -20,4 +20,7 @@
     <string name="number_test">+ 996 788 999 555</string>
     <string name="text_in_password_recovery">Введите номер, указанный при регистрации. Вам будет отправлен код подтверждения</string>
     <string name="send">Отправить</string>
+    <string name="instruction_for_token">Введите 6 значный код, отправленный на номер +996 788 999 666</string>
+    <string name="create_new_password">Введите новый пароль</string>
+    <string name="accept_new_password">Подтвердите новый пароль</string>
 </resources>

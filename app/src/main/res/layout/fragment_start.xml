@@ -17,7 +17,7 @@
         android:id="@+id/custom_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_46"
         android:src="@drawable/ic_custom_caps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
