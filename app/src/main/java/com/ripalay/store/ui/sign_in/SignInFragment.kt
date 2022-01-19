@@ -44,6 +44,9 @@ class SignInFragment : Fragment() {
         binding.tvSignUp.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
         }
+        binding.tvRestore.setOnClickListener {
+            navController.navigate(R.id.passwordRecoveryFragment)
+        }
     }
 
     private fun textWatcher(et: EditText, ic: Int, ic2: Int) {

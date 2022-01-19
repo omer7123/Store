@@ -3,19 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio Project/Store/app/src/main/res/drawable/bg_btn_active.xml" value="0.25052083333333336" />
+        <entry key="..\:/Android Studio Project/Store/app/src/main/res/drawable/bg_btn_inactive.xml" value="0.25052083333333336" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/drawable/ic_custom_caps.xml" value="0.24322916666666666" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/drawable/ic_facebook.xml" value="0.26614583333333336" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/drawable/ic_logo_google.xml" value="0.26614583333333336" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/drawable/ic_vector.xml" value="0.26614583333333336" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout-v28/fragment_start.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/fragment_password_recovery.xml" value="0.234375" />
+        <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/fragment_sign_in.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/fragment_start.xml" value="0.25" />
-        <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_btn_active.xml" value="0.2703125" />
-        <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_btn_dark.xml" value="0.2703125" />
-        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_sign_in.xml" value="0.264" />
-        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_start.xml" value="0.264" />
       </map>
     </option>
   </component>

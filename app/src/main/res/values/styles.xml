@@ -56,4 +56,13 @@
         <item name="android:elevation">@dimen/margin_0</item>
     </style>
 
+    <style name="instrutcion_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/margin_30</item>
+        <item name="android:fontFamily">@font/sf_ui_text_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/size_14</item>
+    </style>
+
 </resources>

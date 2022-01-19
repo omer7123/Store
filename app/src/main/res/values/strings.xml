@@ -16,4 +16,8 @@
     <string name="not_signed_up_yet">Еще не зарегистрированы?</string>
     <string name="forgot_password">Забыли пароль?</string>
     <string name="restore">Восстановить</string>
+    <string name="password_recovery">Восстановить пароль</string>
+    <string name="number_test">+ 996 788 999 555</string>
+    <string name="text_in_password_recovery">Введите номер, указанный при регистрации. Вам будет отправлен код подтверждения</string>
+    <string name="send">Отправить</string>
 </resources>

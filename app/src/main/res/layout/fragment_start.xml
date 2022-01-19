@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.start.StartFragment">
 
     <ImageView
@@ -48,24 +49,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/custom_tv" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_in_btn"
-        style="@style/btn_light"
-        android:layout_marginHorizontal="@dimen/margin_30"
         android:layout_marginBottom="@dimen/margin_10"
+        app:cornerRadius="@dimen/margin_21"
+        app:backgroundTint="@color/white"
+        android:paddingVertical="@dimen/margin_16"
         android:text="@string/sign_in"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/register_btn"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginHorizontal="@dimen/margin_40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/register_btn"
-        style="@style/btn_dark"
-        android:layout_marginHorizontal="@dimen/margin_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_40"
         android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/black_with_alfa"
+        android:fontFamily="@font/sf_ui_text_regular"
+        android:paddingVertical="16dp"
         android:text="@string/register"
+        android:textAllCaps="false"
+        android:textFontWeight="700"
+        android:textSize="@dimen/size_16"
+        app:cornerRadius="@dimen/margin_21"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:ignore="UnusedAttribute" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
