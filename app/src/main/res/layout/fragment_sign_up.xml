@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -85,37 +86,36 @@
         <LinearLayout
             android:id="@+id/lin_layout_1"
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/margin_30"
-            android:visibility="gone"
-            android:layout_below="@id/et_signup_confirm_pass"
             android:layout_height="wrap_content"
-            android:weightSum="2"
+            android:layout_below="@id/et_signup_confirm_pass"
             android:layout_marginHorizontal="@dimen/margin_91"
-            android:orientation="horizontal" >
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/got_account"
                 android:textAlignment="textStart"
-                android:layout_weight="1"
                 android:textColor="@color/regular_gray"
-                android:textSize="@dimen/size_14"
-                />
+                android:textSize="@dimen/size_14" />
 
             <TextView
                 android:id="@+id/tv_enter"
-                android:text="@string/sign_in"
-                android:textAlignment="textEnd"
-                android:layout_weight="1"
-                android:textSize="@dimen/size_14"
-                android:clickable="true"
-                android:autoLink="all"
-                android:linksClickable="true"
-                android:textColor="@color/hyperlink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:focusable="true" />
+                android:layout_weight="1"
+                android:autoLink="all"
+                android:clickable="true"
+                android:focusable="true"
+                android:linksClickable="true"
+                android:text="@string/sign_in"
+                android:textAlignment="textEnd"
+                android:textColor="@color/hyperlink"
+                android:textSize="@dimen/size_14" />
 
         </LinearLayout>
 
@@ -167,23 +167,25 @@
             android:layout_below="@id/lin_layout_2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_42"
-            android:orientation="horizontal">
+            android:layout_marginBottom="@dimen/margin_20"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/iv_signup_facebook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
+                android:id="@+id/fab_signup_facebook"
+                style="@style/fab_fb_ggl"
                 android:src="@drawable/ic_facebook"
+                app:borderWidth="@dimen/margin_0"
+                app:elevation="@dimen/margin_0"
                 tools:ignore="ContentDescription" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/iv_signup_google"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_16"
-                android:backgroundTint="@color/white"
+                android:id="@+id/fab_signup_google"
+                style="@style/fab_fb_ggl"
+                android:layout_marginStart="@dimen/margin_16"
                 android:src="@drawable/ic_google"
+                app:borderWidth="@dimen/margin_0"
+                app:elevation="@dimen/margin_0"
                 tools:ignore="ContentDescription" />
 
         </LinearLayout>

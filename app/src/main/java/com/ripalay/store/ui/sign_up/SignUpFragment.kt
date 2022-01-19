@@ -13,6 +13,8 @@ import android.widget.EditText
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.core.widget.addTextChangedListener
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -43,7 +45,7 @@ class SignUpFragment : Fragment() {
         textWatcher(binding.etSignupPhone, R.drawable.ic_phone, R.drawable.ic_phone_selected)
         binding.etSignupPhone.addTextChangedListener(PhoneNumberFormattingTextWatcher())
         textWatcher(binding.etSignupPassword, R.drawable.ic_password, R.drawable.ic_password_selected)
-        lastTextWatcher()
+        textWatcher(binding.etSignupConfirmPass, R.drawable.ic_password, R.drawable.ic_password_selected)
 
         binding.tvEnter.setOnClickListener {
             navController.navigate(R.id.signInFragment)
@@ -51,69 +53,31 @@ class SignUpFragment : Fragment() {
     }
 
     private fun textWatcher(et: EditText, ic: Int, ic2: Int) {
-        et.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if (s.toString().isEmpty()) {
-                    var icon = ContextCompat.getDrawable(requireActivity(), ic)
-                    icon = DrawableCompat.wrap(icon!!)
-                    et.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
-                }
-            }
+        et.doAfterTextChanged {
+            if (it.toString().isEmpty()) {
+                var icon = ContextCompat.getDrawable(requireActivity(), ic)
+                icon = DrawableCompat.wrap(icon!!)
+                et.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
+                binding.btnSignup.setBackgroundResource(R.drawable.bg_btn_inactive)
+                binding.btnSignup.setTextColor(ContextCompat.getColor(requireContext(),
+                    R.color.label_black_30))
+                binding.linLayout1.isVisible = false
+                binding.linLayout2.isVisible = true
+                binding.linLayout3.isVisible = true
+            } else {
+                var icon = ContextCompat.getDrawable(requireActivity(), ic2)
+                icon = DrawableCompat.wrap(icon!!)
+                et.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (count > 0) {
-                    var icon = ContextCompat.getDrawable(requireActivity(), ic2)
-                    icon = DrawableCompat.wrap(icon!!)
-                    et.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
-                }
+                binding.btnSignup.setBackgroundResource(R.drawable.bg_btn_active)
+                binding.btnSignup.setTextColor(ContextCompat.getColor(requireContext(),
+                    R.color.white))
+                binding.linLayout1.isVisible = true
+                binding.linLayout2.isVisible = false
+                binding.linLayout3.isVisible = false
             }
-        })
-    }
+        }
 
-    private fun lastTextWatcher() {
-        binding.etSignupConfirmPass.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if (s.toString().isEmpty()) {
-                    var icon =
-                        ContextCompat.getDrawable(requireActivity(), R.drawable.ic_password)
-                    icon = DrawableCompat.wrap(icon!!)
-                    binding.etSignupConfirmPass.setCompoundDrawablesWithIntrinsicBounds(icon,
-                        null,
-                        null,
-                        null)
-                    binding.btnSignup.setBackgroundResource(R.drawable.bg_btn_inactive)
-                    binding.btnSignup.setTextColor(ContextCompat.getColor(requireContext(),
-                        R.color.label_black_30))
-                    binding.linLayout1.isVisible = false
-                    binding.linLayout2.isVisible = true
-                    binding.linLayout3.isVisible = true
-                }
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (count > 0) {
-                    var icon =
-                        ContextCompat.getDrawable(requireActivity(),
-                            R.drawable.ic_password_selected)
-                    icon = DrawableCompat.wrap(icon!!)
-                    binding.etSignupConfirmPass.setCompoundDrawablesWithIntrinsicBounds(icon,
-                        null,
-                        null,
-                        null)
-                    binding.btnSignup.setBackgroundResource(R.drawable.bg_btn_active)
-                    binding.btnSignup.setTextColor(ContextCompat.getColor(requireContext(),
-                        R.color.white))
-                    binding.linLayout1.isVisible = true
-                    binding.linLayout2.isVisible = false
-                    binding.linLayout3.isVisible = false
-                }
-            }
-        })
     }
 }
