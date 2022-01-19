@@ -36,6 +36,7 @@
     <dimen name="margin_33">33dp</dimen>
     <dimen name="margin_26">26dp</dimen>
     <dimen name="margin_96">96dp</dimen>
+    <dimen name="margin_0">0dp</dimen>
 
 
 </resources>

@@ -49,6 +49,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="fab_fb_ggl">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:elevation">@dimen/margin_0</item>
+    </style>
 
     <style name="instrutcion_tv">
         <item name="android:layout_width">match_parent</item>
