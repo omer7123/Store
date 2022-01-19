@@ -1,4 +1,4 @@
-package com.ripalay.store.ui
+package com.ripalay.store.ui.enter_token_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.ripalay.store.R
 import com.ripalay.store.databinding.FragmentEnterTokenBinding
-import com.ripalay.store.databinding.FragmentSignInBinding
 
 class EnterTokenFragment : Fragment() {
     private lateinit var binding: FragmentEnterTokenBinding

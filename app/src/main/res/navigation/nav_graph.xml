@@ -27,12 +27,12 @@
         tools:layout="@layout/fragment_password_recovery" />
     <fragment
         android:id="@+id/enterTokenFragment"
-        android:name="com.ripalay.store.ui.EnterTokenFragment"
+        android:name="com.ripalay.store.ui.enter_token_fragment.EnterTokenFragment"
         android:label="fragment_enter_token"
         tools:layout="@layout/fragment_enter_token" />
     <fragment
         android:id="@+id/createNewPasswordFragment"
-        android:name="com.ripalay.store.ui.CreateNewPasswordFragment"
+        android:name="com.ripalay.store.ui.create_new_password_fragment.CreateNewPasswordFragment"
         android:label="fragment_create_new_password"
         tools:layout="@layout/fragment_create_new_password" />
 </navigation>

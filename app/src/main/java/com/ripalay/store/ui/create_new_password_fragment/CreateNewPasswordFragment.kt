@@ -1,4 +1,4 @@
-package com.ripalay.store.ui
+package com.ripalay.store.ui.create_new_password_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,6 @@ import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.widget.addTextChangedListener
 import com.ripalay.store.R
 import com.ripalay.store.databinding.FragmentCreateNewPasswordBinding
-import com.ripalay.store.databinding.FragmentEnterTokenBinding
 
 class CreateNewPasswordFragment : Fragment() {
 
