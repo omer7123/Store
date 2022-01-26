@@ -1,6 +1,7 @@
 package com.ripalay.store.ui.password_recovery
 
 import android.os.Bundle
+import android.telephony.PhoneNumberFormattingTextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,7 @@ class PasswordRecoveryFragment : Fragment() {
 
     private fun initEditText() {
         binding.sendBtn.isEnabled = false
+        binding.numberEt.addTextChangedListener(PhoneNumberFormattingTextWatcher())
         binding.numberEt.addTextChangedListener {
             if (it.toString().isNotEmpty()) {
                 binding.sendBtn.setBackgroundResource(R.drawable.bg_btn_active)

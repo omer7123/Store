@@ -35,4 +35,24 @@
         android:name="com.ripalay.store.ui.create_new_password_fragment.CreateNewPasswordFragment"
         android:label="fragment_create_new_password"
         tools:layout="@layout/fragment_create_new_password" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.ripalay.store.ui.home_fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.ripalay.store.ui.basket_fragment.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ripalay.store.ui.profile_fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/favoriteProductsFragment"
+        android:name="com.ripalay.store.ui.favorite_products.FavoriteProductsFragment"
+        android:label="fragment_favorite_products"
+        tools:layout="@layout/fragment_favorite_products" />
 </navigation>

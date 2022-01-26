@@ -18,4 +18,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_nav"
+        android:layout_marginBottom="@dimen/margin_20"
+        app:cardCornerRadius="@dimen/margin_30"
+        android:layout_marginHorizontal="@dimen/margin_29"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            app:itemIconTint="@color/black"
+            app:itemHorizontalTranslationEnabled="false"
+            app:itemRippleColor="@color/black"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

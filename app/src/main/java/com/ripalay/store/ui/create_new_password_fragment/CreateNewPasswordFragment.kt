@@ -8,12 +8,16 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.widget.addTextChangedListener
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.ripalay.store.R
 import com.ripalay.store.databinding.FragmentCreateNewPasswordBinding
 
 class CreateNewPasswordFragment : Fragment() {
 
     private lateinit var binding: FragmentCreateNewPasswordBinding
+    private lateinit var navController: NavController
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +29,15 @@ class CreateNewPasswordFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navController = findNavController()
         initEditText()
+        initListener()
+    }
+
+    private fun initListener() {
+        binding.sendBtn.setOnClickListener {
+            navController.navigate(R.id.homeFragment2)
+        }
     }
 
     private fun initEditText() {
