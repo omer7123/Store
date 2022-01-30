@@ -1,39 +1,30 @@
 package com.ripalay.store.ui.start
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
+import com.ripalay.store.core.ui.BaseFragment
+import com.ripalay.store.core.ui.BaseViewModel
 import com.ripalay.store.databinding.FragmentStartBinding
 
-class StartFragment : Fragment() {
-    private lateinit var binding: FragmentStartBinding
+class StartFragment : BaseFragment<BaseViewModel, FragmentStartBinding>(R.layout.fragment_start) {
+
+    override val viewModel: BaseViewModel by viewModels()
+    override val binding: FragmentStartBinding by viewBinding()
     private lateinit var navController: NavController
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentStartBinding.inflate(layoutInflater)
-        return binding.root
-    }
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        navController = findNavController()
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initListeners() {
         binding.registerBtn.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
         }
         binding.signInBtn.setOnClickListener {
             navController.navigate(R.id.signInFragment)
         }
+    }
+
+    override fun initNavController() {
+        navController = findNavController()
     }
 }

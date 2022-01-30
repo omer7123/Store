@@ -1,46 +1,33 @@
 package com.ripalay.store.ui.sign_in
 
-import android.os.Bundle
 import android.telephony.PhoneNumberFormattingTextWatcher
-import android.text.Editable
-import android.text.TextWatcher
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.widget.doAfterTextChanged
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.ripalay.store.databinding.FragmentSignInBinding
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
+import com.ripalay.store.core.ui.BaseFragment
+import com.ripalay.store.core.ui.BaseViewModel
+import com.ripalay.store.databinding.FragmentSignInBinding
 
-class SignInFragment : Fragment() {
+class SignInFragment : BaseFragment<BaseViewModel, FragmentSignInBinding>
+    (R.layout.fragment_sign_in) {
 
-    private lateinit var binding: FragmentSignInBinding
+    override val viewModel: BaseViewModel by viewModels()
+    override val binding: FragmentSignInBinding by viewBinding()
     private lateinit var navController: NavController
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View {
-        binding = FragmentSignInBinding.inflate(layoutInflater)
-        return binding.root
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        navController = findNavController()
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initViews() {
         binding.etSignInPhone.addTextChangedListener(PhoneNumberFormattingTextWatcher())
         textWatcher(binding.etSignInPhone, R.drawable.ic_phone, R.drawable.ic_phone_selected)
         textWatcher(binding.etSignInPassword, R.drawable.ic_password, R.drawable.ic_password_selected)
+    }
 
+    override fun initListeners() {
         binding.tvSignUp.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
         }
@@ -69,6 +56,10 @@ class SignInFragment : Fragment() {
                     R.color.white))
             }
         }
+    }
+
+    override fun initNavController() {
+        navController = findNavController()
     }
 
 }

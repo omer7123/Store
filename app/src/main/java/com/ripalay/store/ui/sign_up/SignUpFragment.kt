@@ -1,52 +1,35 @@
 package com.ripalay.store.ui.sign_up
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.ripalay.store.databinding.FragmentSignUpBinding
 import android.telephony.PhoneNumberFormattingTextWatcher
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.EditText
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.isVisible
-import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doAfterTextChanged
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
+import com.ripalay.store.core.ui.BaseFragment
+import com.ripalay.store.core.ui.BaseViewModel
+import com.ripalay.store.databinding.FragmentSignUpBinding
 
-class SignUpFragment : Fragment() {
+class SignUpFragment : BaseFragment<BaseViewModel, FragmentSignUpBinding>(R.layout.fragment_sign_up) {
 
-    private lateinit var binding: FragmentSignUpBinding
+    override val viewModel: BaseViewModel by viewModels()
+    override val binding: FragmentSignUpBinding by viewBinding()
     private lateinit var navController: NavController
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View {
-        binding = FragmentSignUpBinding.inflate(layoutInflater)
-        return binding.root
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        navController = findNavController()
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    override fun initViews() {
         textWatcher(binding.etSignupName, R.drawable.ic_user, R.drawable.ic_user_selected)
         textWatcher(binding.etSignupPhone, R.drawable.ic_phone, R.drawable.ic_phone_selected)
         binding.etSignupPhone.addTextChangedListener(PhoneNumberFormattingTextWatcher())
         textWatcher(binding.etSignupPassword, R.drawable.ic_password, R.drawable.ic_password_selected)
         textWatcher(binding.etSignupConfirmPass, R.drawable.ic_password, R.drawable.ic_password_selected)
+    }
 
+    override fun initListeners() {
         binding.tvEnter.setOnClickListener {
             navController.navigate(R.id.signInFragment)
         }
@@ -78,6 +61,9 @@ class SignUpFragment : Fragment() {
                 binding.linLayout3.isVisible = false
             }
         }
+    }
 
+    override fun initNavController() {
+        navController = findNavController()
     }
 }

@@ -1,17 +1,16 @@
 package com.ripalay.store.ui.favorite_products
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
-class FavoriteProductsFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorite_products, container, false)
-    }
+import com.ripalay.store.core.ui.BaseFragment
+import com.ripalay.store.core.ui.BaseViewModel
+import com.ripalay.store.databinding.FragmentFavoriteProductsBinding
+
+class FavoriteProductsFragment : BaseFragment<BaseViewModel, FragmentFavoriteProductsBinding>
+    (R.layout.fragment_favorite_products){
+
+    override val viewModel: BaseViewModel by viewModels()
+    override val binding: FragmentFavoriteProductsBinding by viewBinding()
+
 }

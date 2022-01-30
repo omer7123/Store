@@ -1,17 +1,15 @@
 package com.ripalay.store.ui.profile_fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
-class ProfileFragment : Fragment() {
+import com.ripalay.store.core.ui.BaseFragment
+import com.ripalay.store.core.ui.BaseViewModel
+import com.ripalay.store.databinding.FragmentProfileBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
-    }
+class ProfileFragment :
+    BaseFragment<BaseViewModel, FragmentProfileBinding>(R.layout.fragment_profile) {
+
+    override val viewModel: BaseViewModel by viewModels()
+    override val binding: FragmentProfileBinding by viewBinding()
 }
