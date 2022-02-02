@@ -1,35 +1,39 @@
 package com.ripalay.store.core.network
 
 import com.ripalay.store.BuildConfig.BASE_URL
-import com.ripalay.store.data.StoreApi
+import com.ripalay.store.data.remote.StoreApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class RetrofitClient {
-    companion object{
-        fun create(): StoreApi {
-            val interceptor = HttpLoggingInterceptor()
-            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+    val networkModule = module {
+        factory { provideOkHttpClient() }
+        factory { provideApi(get()) }
+        single{ provideRetrofit(get())}
+    }
 
-            val okHttpClient = OkHttpClient().newBuilder()
-                .connectTimeout(30,TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
-                .writeTimeout(30, TimeUnit.SECONDS)
-                .addInterceptor(interceptor)
-                .build()
+    fun provideOkHttpClient(): OkHttpClient {
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
-            val retrofitClient = Retrofit.Builder()
-                .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(BASE_URL)
-                .build()
-            return retrofitClient.create(StoreApi::class.java)
-
-
-        }
+        return OkHttpClient().newBuilder()
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
+            .addInterceptor(interceptor)
+            .build()
 
     }
-}
+
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+
+        return Retrofit.Builder()
+            .client(okHttpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .build()
+    }
+    fun provideApi(retrofit: Retrofit): StoreApi = retrofit.create(StoreApi::class.java)
