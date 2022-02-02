@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface StoreApi {
-    @GET
+    @GET("api/v1/caps/")
     suspend fun getCaps():Response<Caps>
 }
