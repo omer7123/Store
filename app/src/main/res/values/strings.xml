@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Store</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="custom_caps">CUSTOM CAPS</string>
     <string name="signup">Регистрация</string>
@@ -23,4 +22,17 @@
     <string name="instruction_for_token">Введите 6 значный код, отправленный на номер +996 788 999 666</string>
     <string name="create_new_password">Введите новый пароль</string>
     <string name="accept_new_password">Подтвердите новый пароль</string>
+    <string name="search">Поиск</string>
+    <string name="new_era">New Era</string>
+    <string name="brightest_2021_collection">Самая яркая коллекция 2021</string>
+    <string name="popular_brands">Популярные Бренды</string>
+    <string name="adidas">Adidas</string>
+    <string name="watch_all">Смотреть все</string>
+    <string name="san_francisco_baseball">San Francisco Baseball</string>
+    <string name="new_price">3800 сом</string>
+    <string name="promotions">Акции</string>
+    <string name="old_price"> <strike> 4600 сом </strike> </string>
+    <string name="supreme_new_era"><![CDATA[Supreme & New Era]]></string>
+    <string name="collaborations">collaborations</string>
+    <string name="catalogue">Каталог</string>
 </resources>

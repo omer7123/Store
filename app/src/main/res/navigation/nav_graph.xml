@@ -55,4 +55,14 @@
         android:name="com.ripalay.store.ui.favorite_products.FavoriteProductsFragment"
         android:label="fragment_favorite_products"
         tools:layout="@layout/fragment_favorite_products" />
+    <fragment
+        android:id="@+id/catalogueFragment"
+        android:name="com.ripalay.store.ui.catalogue.CatalogueFragment"
+        android:label="fragment_catalogue"
+        tools:layout="@layout/fragment_catalogue" />
+    <fragment
+        android:id="@+id/promotionsFragment"
+        android:name="com.ripalay.store.ui.promotions.PromotionsFragment"
+        android:label="fragment_promotions"
+        tools:layout="@layout/fragment_promotions" />
 </navigation>

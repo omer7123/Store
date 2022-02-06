@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_10"
+    android:orientation="vertical">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_brand"
+        android:layout_width="@dimen/margin_72"
+        android:layout_height="@dimen/margin_72"
+        android:backgroundTint="@color/label_black_5"
+        android:elevation="@dimen/margin_0"
+        android:src="@drawable/ic_brand_logo"
+        app:borderWidth="@dimen/margin_0"
+        app:elevation="@dimen/margin_0"
+        app:fabCustomSize="@dimen/margin_72"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_ui_text_regular"
+        android:text="@string/adidas"
+        android:textColor="@color/label_black_100"
+        android:textSize="@dimen/size_12"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/fab_brand" />
+
+</LinearLayout>

@@ -15,8 +15,8 @@
             android:id="@+id/iv_logo"
             android:layout_width="@dimen/margin_83"
             android:layout_height="@dimen/margin_66"
-            android:layout_marginTop="@dimen/margin_46"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_46"
             android:src="@drawable/ic_custom_caps"
             tools:ignore="ContentDescription" />
 
@@ -81,16 +81,9 @@
 
             <TextView
                 android:id="@+id/tv_sign_up"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/tv_clickable"
                 android:layout_weight="1"
-                android:autoLink="all"
-                android:clickable="true"
-                android:focusable="true"
-                android:linksClickable="true"
                 android:text="@string/signup"
-                android:textAlignment="textEnd"
-                android:textColor="@color/hyperlink"
                 android:textSize="@dimen/size_14" />
 
         </LinearLayout>
@@ -116,16 +109,9 @@
 
             <TextView
                 android:id="@+id/tv_restore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/tv_clickable"
                 android:layout_weight="1"
-                android:autoLink="all"
-                android:clickable="true"
-                android:focusable="true"
-                android:linksClickable="true"
                 android:text="@string/restore"
-                android:textAlignment="textEnd"
-                android:textColor="@color/hyperlink"
                 android:textSize="@dimen/size_14" />
 
         </LinearLayout>

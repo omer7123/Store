@@ -24,6 +24,19 @@
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/fragment_sign_up.xml" value="0.234375" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/layout/fragment_start.xml" value="0.25" />
         <entry key="..\:/Android Studio Project/Store/app/src/main/res/menu/bottom_nav_menu.xml" value="0.234375" />
+        <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_btn_active.xml" value="0.2703125" />
+        <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_btn_dark.xml" value="0.2703125" />
+        <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_home_card_view_2.xml" value="0.2703125" />
+        <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_search_view.xml" value="0.2703125" />
+        <entry key="..\:/Users/Store/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_promotions.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/item_brands.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/item_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/item_product_action.xml" value="0.264" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/item_product_promotion.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
       </map>
     </option>
   </component>

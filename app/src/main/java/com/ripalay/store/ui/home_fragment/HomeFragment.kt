@@ -1,15 +1,86 @@
 package com.ripalay.store.ui.home_fragment
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
 import com.ripalay.store.core.ui.BaseFragment
-import com.ripalay.store.core.ui.BaseViewModel
 import com.ripalay.store.databinding.FragmentHomeBinding
+import com.ripalay.store.domain.models.Brands
+import com.ripalay.store.domain.models.CapProduct
+import com.ripalay.store.ui.catalogue.CatalogueAdapter
+import com.ripalay.store.ui.promotions.PromotionsAdapter
 
-class HomeFragment : BaseFragment<BaseViewModel, FragmentHomeBinding>(R.layout.fragment_home) {
+class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.fragment_home) {
 
-    override val viewModel: BaseViewModel by viewModels()
+    override val viewModel: HomeViewModel by viewModels()
     override val binding: FragmentHomeBinding by viewBinding()
+    private lateinit var navController: NavController
+
+    private var productList = mutableListOf<CapProduct>()
+    private var brandsList = mutableListOf<Brands>()
+    private val catalogueAdapter: CatalogueAdapter by lazy {
+        CatalogueAdapter(productList)
+    }
+
+    private val promotionsAdapter: PromotionsAdapter by lazy {
+        PromotionsAdapter(productList)
+    }
+
+    private val brandsAdapter: BrandsAdapter by lazy {
+        BrandsAdapter(brandsList)
+    }
+
+    override fun initViews() {
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
+
+        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
+        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
+        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
+        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
+        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
+
+        binding.recyclerBrands.apply {
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = this@HomeFragment.brandsAdapter
+        }
+
+        binding.recyclerCatalogue.apply {
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = this@HomeFragment.catalogueAdapter
+        }
+
+        binding.recyclerPromotions.apply {
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = this@HomeFragment.promotionsAdapter
+        }
+    }
+
+    override fun initListeners() {
+        binding.tvWatchCatalogue.setOnClickListener {
+            navController.navigate(R.id.catalogueFragment)
+        }
+
+        binding.tvWatchPromotions.setOnClickListener {
+            navController.navigate(R.id.catalogueFragment)
+        }
+    }
+
+    override fun initNavController() {
+        navController = findNavController()
+    }
 
 }

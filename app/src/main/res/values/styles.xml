@@ -65,4 +65,26 @@
         <item name="android:textSize">@dimen/size_14</item>
     </style>
 
+    <style name="tv_recycler_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:fontFamily">@font/sf_ui_display_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/label_black_100</item>
+        <item name="android:textSize">@dimen/size_20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_clickable">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:autoLink">all</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textColor">@color/hyperlink</item>
+    </style>
+
 </resources>
