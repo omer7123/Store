@@ -72,10 +72,24 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+
     // CardView
     implementation "androidx.cardview:cardview:1.0.0"
 
     // Recycler View
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    
+    // KoinDI
+    def koin_version = "2.2.3"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-androidx-scope:$koin_version"
+    implementation "io.insert-koin:koin-androidx-viewmodel:$koin_version"
+
+    // Architecture Components
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.core:core-ktx:1.8.0-alpha02'
+
 
 }
