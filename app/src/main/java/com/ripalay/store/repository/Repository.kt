@@ -11,5 +11,6 @@ class Repository(private val dataSource: RemoteDataSource) {
     fun getCaps(): LiveData<Resource<Caps>> = liveData(Dispatchers.IO) {
         emit(Resource.loading())
         val response = dataSource.getCaps()
+        emit(response)
     }
 }

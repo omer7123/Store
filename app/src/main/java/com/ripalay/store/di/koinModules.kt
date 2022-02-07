@@ -5,5 +5,7 @@ import com.ripalay.store.data.remote.remoteDataSource
 
 val koinModules = listOf(
     networkModule,
-    remoteDataSource
+    remoteDataSource,
+    repoModules,
+    viewModules
 )

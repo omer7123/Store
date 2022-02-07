@@ -18,10 +18,9 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding>(layoutID: Int)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         initViews()
-        initListeners()
         initObservers()
+        initListeners()
     }
 
     open fun initNavController() {}
