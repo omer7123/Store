@@ -5,7 +5,7 @@ data class Result(
     val created: String?,
     val description: String?,
     val id: Int?,
-    val imege: String?,
+    val image: String?,
     val name: String?,
     val price: Double?,
     val size: List<Int>?,
