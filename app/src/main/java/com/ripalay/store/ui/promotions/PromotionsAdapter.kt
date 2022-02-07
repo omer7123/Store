@@ -36,7 +36,7 @@ class PromotionsAdapter (private val list: List<Result>)
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
             binding.tvNewPrice.text = "${result.price} сом"
-//            binding.tvOldPrice.text = "${result.oldPrice} сом"
+//            binding.tvOldPrice.text = "${product.oldPrice} сом"
         }
     }
 }
