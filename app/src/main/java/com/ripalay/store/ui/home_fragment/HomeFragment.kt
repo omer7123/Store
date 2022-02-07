@@ -19,7 +19,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     override val binding: FragmentHomeBinding by viewBinding()
     private lateinit var navController: NavController
 
-    private var list = listOf<Int>()
     private var productList = mutableListOf<Result>()
     private var brandsList = mutableListOf<Brands>()
     private val catalogueAdapter: CatalogueAdapter by lazy {
@@ -35,19 +34,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     }
 
     override fun initViews() {
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-        productList.add(Result(1, "bla", "bla", 1, "bla", "bla", 3000.0, list, "bla"))
-
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
 
         binding.recyclerBrands.apply {
             layoutManager =
