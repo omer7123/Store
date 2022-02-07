@@ -14,15 +14,16 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            android:background="@drawable/bg_search_view"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_35"
+            android:layout_marginHorizontal="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_45"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_15"
                 app:defaultQueryHint="Поиск" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -30,6 +31,7 @@
         <ImageView
             android:id="@+id/advertising"
             android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@drawable/ic_adversting"
@@ -65,9 +67,31 @@
             android:id="@+id/recycler_catalogue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
             app:layout_constraintTop_toBottomOf="@id/settings_btn"
             app:spanCount="2"
             tools:listitem="@layout/item_product" />
+        <TextView
+            android:id="@+id/tv_promotions"
+            style="@style/tv_recycler_title"
+            android:layout_marginTop="@dimen/margin_34"
+            android:text="@string/promotions"
+            app:layout_constraintTop_toBottomOf="@id/recycler_catalogue"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_promotions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_80"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_promotions"
+            tools:listitem="@layout/item_product_promotion" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

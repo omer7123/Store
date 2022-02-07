@@ -68,5 +68,6 @@
     <dimen name="margin_332">332dp</dimen>
     <dimen name="margin_156">156dp</dimen>
     <dimen name="margin_240">240dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
 
 </resources>

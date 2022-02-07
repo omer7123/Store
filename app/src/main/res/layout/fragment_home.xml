@@ -273,7 +273,7 @@
             android:layout_marginTop="@dimen/margin_12"
             android:minHeight="@dimen/margin_240"
             android:orientation="horizontal"
-            android:paddingBottom="80dp"
+            android:paddingBottom="@dimen/margin_80"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

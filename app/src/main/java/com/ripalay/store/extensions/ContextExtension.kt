@@ -1,4 +1,4 @@
-package com.ripalay.youtubeapi.extensions
+package com.ripalay.store.extensions
 
 import android.content.Context
 import android.widget.Toast

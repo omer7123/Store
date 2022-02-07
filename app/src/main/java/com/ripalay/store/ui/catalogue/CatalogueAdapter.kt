@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ripalay.store.data.remote.models.Result
 import com.ripalay.store.databinding.ItemProductBinding
 import com.ripalay.store.domain.models.CapsCallback
+import com.ripalay.store.extensions.load
 
 class CatalogueAdapter(private val list: List<Result>)
     : ListAdapter<Result, CatalogueAdapter.ViewHolder>(CapsCallback()) {
@@ -35,6 +36,7 @@ class CatalogueAdapter(private val list: List<Result>)
         fun bind(result: Result) {
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
+            binding.ivProduct.load(result.image.toString())
             binding.tvPrice.text = "${result.price} сом"
         }
     }
