@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.ripalay.store.data.remote.models.Result
 import com.ripalay.store.databinding.ItemProductPromotionBinding
-import com.ripalay.store.domain.models.CapProduct
-import com.ripalay.store.domain.models.CapProductCallback
+import com.ripalay.store.domain.models.CapsCallback
 
-class PromotionsAdapter (private val list: List<CapProduct>)
-    : ListAdapter<CapProduct, PromotionsAdapter.ViewHolder>(CapProductCallback()) {
+class PromotionsAdapter (private val list: List<Result>)
+    : ListAdapter<Result, PromotionsAdapter.ViewHolder>(CapsCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PromotionsAdapter.ViewHolder {
         val binding = ItemProductPromotionBinding.inflate(LayoutInflater.from(parent.context),
@@ -32,11 +32,11 @@ class PromotionsAdapter (private val list: List<CapProduct>)
         private val binding = itemBinding
 
         @SuppressLint("SetTextI18n")
-        fun bind(product: CapProduct) {
-            binding.tvBrandName.text = product.brand
-            binding.tvProductName.text = product.name
-            binding.tvNewPrice.text = "${product.price} сом"
-            binding.tvOldPrice.text = "${product.oldPrice} сом"
+        fun bind(result: Result) {
+            binding.tvBrandName.text = result.brand.toString()
+            binding.tvProductName.text = result.name
+            binding.tvNewPrice.text = "${result.price} сом"
+//            binding.tvOldPrice.text = "${result.oldPrice} сом"
         }
     }
 }
