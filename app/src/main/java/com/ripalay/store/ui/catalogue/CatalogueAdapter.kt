@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.ripalay.store.data.remote.models.Result
 import com.ripalay.store.databinding.ItemProductBinding
-import com.ripalay.store.domain.models.CapProduct
-import com.ripalay.store.domain.models.CapProductCallback
+import com.ripalay.store.domain.models.CapsCallback
 
-class CatalogueAdapter(private val list: List<CapProduct>)
-    : ListAdapter<CapProduct, CatalogueAdapter.ViewHolder>(CapProductCallback()) {
+class CatalogueAdapter(private val list: List<Result>)
+    : ListAdapter<Result, CatalogueAdapter.ViewHolder>(CapsCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatalogueAdapter.ViewHolder {
         val binding = ItemProductBinding.inflate(LayoutInflater.from(parent.context),
@@ -32,10 +32,10 @@ class CatalogueAdapter(private val list: List<CapProduct>)
         private val binding = itemBinding
 
         @SuppressLint("SetTextI18n")
-        fun bind(product: CapProduct) {
-            binding.tvBrandName.text = product.brand
-            binding.tvProductName.text = product.name
-            binding.tvPrice.text = "${product.price} сом"
+        fun bind(result: Result) {
+            binding.tvBrandName.text = result.brand.toString()
+            binding.tvProductName.text = result.name
+            binding.tvPrice.text = "${result.price} сом"
         }
     }
 }

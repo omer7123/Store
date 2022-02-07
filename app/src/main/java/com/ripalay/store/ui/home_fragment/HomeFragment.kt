@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
 import com.ripalay.store.core.ui.BaseFragment
+import com.ripalay.store.data.remote.models.Result
 import com.ripalay.store.databinding.FragmentHomeBinding
 import com.ripalay.store.domain.models.Brands
-import com.ripalay.store.domain.models.CapProduct
 import com.ripalay.store.ui.catalogue.CatalogueAdapter
 import com.ripalay.store.ui.promotions.PromotionsAdapter
 
@@ -19,7 +19,7 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     override val binding: FragmentHomeBinding by viewBinding()
     private lateinit var navController: NavController
 
-    private var productList = mutableListOf<CapProduct>()
+    private var productList = mutableListOf<Result>()
     private var brandsList = mutableListOf<Brands>()
     private val catalogueAdapter: CatalogueAdapter by lazy {
         CatalogueAdapter(productList)
@@ -34,21 +34,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     }
 
     override fun initViews() {
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-        productList.add(CapProduct("Best", R.drawable.ic_home_cap, "Adidas", 4000, false, 5000))
-
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
-        brandsList.add(Brands("Adidas", R.drawable.ic_brand_logo))
 
         binding.recyclerBrands.apply {
             layoutManager =
