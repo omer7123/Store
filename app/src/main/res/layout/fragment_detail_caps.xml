@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail_caps_fragment.DetailCapsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="247dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="@dimen/margin_100"
+            tools:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_100"
+            app:cardCornerRadius="@dimen/margin_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_iv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/brand_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_24"
+                    android:layout_marginTop="@dimen/margin_26"
+                    android:fontFamily="@font/sf_ui_text_regular"
+                    android:text="New Era"
+                    android:textColor="@color/black"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/size_20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_cap_tv"
+                    android:layout_width="@dimen/margin_165"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_24"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:lineHeight="@dimen/margin_28"
+                    android:text="@string/name_cap"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/brand_name_tv" />
+
+                <ImageView
+                    android:id="@+id/like_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_26"
+                    android:layout_marginEnd="@dimen/margin_26"
+                    android:src="@drawable/ic_like"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_46"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:text="@string/price"
+                    android:textColor="@color/yellow"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/size_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_cap_tv" />
+
+                <TextView
+                    android:id="@+id/sizes_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_21"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:text="@string/sizes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/price_tv" />
+
+                <TextView
+                    android:id="@+id/describe_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_21"
+                    android:layout_marginTop="@dimen/margin_100"
+                    android:layout_marginEnd="@dimen/margin_9"
+                    android:fontFamily="@font/sf_ui_text_regular"
+                    android:lineHeight="@dimen/margin_28"
+                    android:text="@string/describe"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sizes_tv" />
+
+                <TextView
+                    android:lineHeight="@dimen/size_28"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_20"
+                    android:text="Похожие товары"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_21"
+                    android:layout_marginTop="@dimen/margin_43"
+                    app:layout_constraintTop_toBottomOf="@id/describe_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

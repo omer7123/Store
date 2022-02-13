@@ -69,5 +69,9 @@
     <dimen name="margin_156">156dp</dimen>
     <dimen name="margin_240">240dp</dimen>
     <dimen name="margin_80">80dp</dimen>
+    <dimen name="size_18">18sp</dimen>
+    <dimen name="margin_9">9dp</dimen>
+    <dimen name="margin_43">43dp</dimen>
+    <dimen name="margin_85">85dp</dimen>
 
 </resources>

@@ -65,4 +65,9 @@
         android:name="com.ripalay.store.ui.promotions.PromotionsFragment"
         android:label="fragment_promotions"
         tools:layout="@layout/fragment_promotions" />
+    <fragment
+        android:id="@+id/detailCapsFragment"
+        android:name="com.ripalay.store.ui.detail_caps_fragment.DetailCapsFragment"
+        android:label="fragment_detail_caps"
+        tools:layout="@layout/fragment_detail_caps" />
 </navigation>

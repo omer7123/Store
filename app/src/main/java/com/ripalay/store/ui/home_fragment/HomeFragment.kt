@@ -22,7 +22,11 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     private var productList = mutableListOf<Result>()
     private var brandsList = mutableListOf<Brands>()
     private val catalogueAdapter: CatalogueAdapter by lazy {
-        CatalogueAdapter(productList)
+        CatalogueAdapter(productList, this::clickListener)
+    }
+
+    private fun clickListener(productList: Result) {
+
     }
 
     private val promotionsAdapter: PromotionsAdapter by lazy {

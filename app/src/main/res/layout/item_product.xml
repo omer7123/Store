@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginHorizontal="@dimen/margin_8"
-    android:layout_width="wrap_content"
+    android:layout_width="180dp"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_16"
         android:id="@+id/card_view"
+        android:layout_marginStart="@dimen/margin_15"
         android:layout_width="@dimen/margin_150"
         android:layout_height="@dimen/margin_150"
         android:backgroundTint="@color/white"
@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/iv_product"
             android:layout_width="@dimen/margin_107"
-            android:layout_height="@dimen/margin_71"
+            android:layout_height="@dimen/margin_85"
             android:layout_gravity="center"
             android:src="@drawable/ic_product"
             tools:ignore="ContentDescription" />
@@ -28,9 +28,10 @@
 
     <TextView
         android:id="@+id/tv_brand_name"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_10"
         android:fontFamily="@font/sf_ui_text_regular"
         android:text="@string/adidas"
@@ -55,7 +56,7 @@
         android:id="@+id/tv_product_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginStart="@dimen/margin_15"
         android:layout_marginTop="@dimen/margin_4"
         android:text="@string/san_francisco_baseball"
         android:textColor="@color/label_black_30"
@@ -68,7 +69,7 @@
         android:id="@+id/tv_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_1"
+        android:layout_marginStart="@dimen/margin_15"
         android:layout_marginTop="@dimen/margin_4"
         android:fontFamily="@font/sf_ui_text_regular"
         android:text="@string/new_price"
