@@ -50,7 +50,12 @@ class CatalogueFragment :
         bundle.putString("id", result.id.toString())
         navController.navigate(R.id.detailCapsFragment, bundle)
         adapter.onItemClick = {
-
+            if (result.isFavorite){
+                Log.e("ololo", it.toString())
+                //Отправляем на бэк модель
+            }else{
+                //Удаляем модель с бэка
+            }
         }
     }
 

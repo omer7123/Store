@@ -9,5 +9,6 @@ data class Result(
     val name: String?,
     val price: Double?,
     val size: List<Int>?,
-    val updated: String?
+    val updated: String?,
+    var isFavorite: Boolean = false
 )

@@ -51,25 +51,19 @@ class CatalogueAdapter(
             binding.tvProductName.text = result.name
             binding.ivProduct.load(result.image.toString())
             binding.tvPrice.text = "${result.price} сом"
+            binding.ivLike.setOnClickListener {
+                result.isFavorite = !result.isFavorite
+                if (result.isFavorite) {
+                    binding.ivLike.setImageResource(R.drawable.ic_like_selected)
+                }
+                if (!result.isFavorite) {
+                    binding.ivLike.setImageResource(R.drawable.ic_like)
+                }
+                onItemClick?.invoke(list[absoluteAdapterPosition])
+                Log.e("olol", "test")
+            }
             binding.root.setOnClickListener {
                 clickListener(result)
-            }
-            binding.ivLike.setOnClickListener {
-                //   Log.e("test", binding.ivLike.resources.getString(R.drawable.ic_like_selected).toString())
-//                if (binding.ivLike.drawable.toString() ==
-//                    "android.graphics.drawable.VectorDrawable@6fc5de0"
-//                    || binding.ivLike.drawable.toString() ==
-//                    "android.graphics.drawable.VectorDrawable@6fc5de0"
-//                ) {
-                    binding.ivLike.setImageResource(R.drawable.ic_like_selected)
-//                }
-                // clickListener(result)
-            }
-        }
-        init {
-            binding.ivLike.setOnClickListener {
-                binding.ivLike.setImageResource(R.drawable.ic_like_selected)
-                onItemClick?.invoke(list[absoluteAdapterPosition])
             }
         }
     }
