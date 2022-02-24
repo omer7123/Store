@@ -40,7 +40,7 @@
                     android:layout_marginStart="@dimen/margin_24"
                     android:layout_marginTop="@dimen/margin_26"
                     android:fontFamily="@font/sf_ui_text_regular"
-                    android:text="New Era"
+                    android:text="@string/new_era"
                     android:textColor="@color/black"
                     android:textFontWeight="700"
                     android:textSize="@dimen/size_20"

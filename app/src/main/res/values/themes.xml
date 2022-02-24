@@ -13,10 +13,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="statusBarBackground">@color/white</item>
-    <!--    <item name="android:windowLightStatusBar">true</item>
--->
+
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">?alertDialogTheme</item>
+        <item name="dialogTheme">?alertDialogTheme</item>
+        <item name="android:dialogTheme">?alertDialogTheme</item>
 
     </style>
 
@@ -24,4 +28,24 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog_fragment</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:textColor">@color/label_black_100</item>
+        <item name="android:background">@drawable/bg_dialog_fragment</item>
+    </style>
+
 </resources>

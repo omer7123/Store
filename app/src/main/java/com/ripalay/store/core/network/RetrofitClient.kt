@@ -1,6 +1,5 @@
 package com.ripalay.store.core.network
 
-import com.ripalay.store.BuildConfig.BASE_URL
 import com.ripalay.store.data.remote.StoreApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -9,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-    val networkModule = module {
+val networkModule = module {
         factory { provideOkHttpClient() }
         factory { provideApi(get()) }
         single{ provideRetrofit(get())}
