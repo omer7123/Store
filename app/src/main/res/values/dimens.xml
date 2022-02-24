@@ -73,5 +73,21 @@
     <dimen name="margin_9">9dp</dimen>
     <dimen name="margin_43">43dp</dimen>
     <dimen name="margin_85">85dp</dimen>
+    <dimen name="margin_298">298dp</dimen>
+    <dimen name="margin_518">518dp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="margin_90">90dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_31">31dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+    <dimen name="margin_330">330dp</dimen>
+    <dimen name="margin_341">341dp</dimen>
+    <dimen name="margin_89">89dp</dimen>
+    <dimen name="margin_84">84dp</dimen>
+    <dimen name="margin_47">47dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_350">350dp</dimen>
 
 </resources>

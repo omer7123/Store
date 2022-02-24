@@ -12,14 +12,14 @@ import com.ripalay.store.databinding.ActivityMainBinding
 import com.ripalay.store.core.ui.BaseViewModel
 
 class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
+
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         initNavControllerWithBottomNav()
         initDestination()
-
-
     }
 
 
@@ -39,7 +39,6 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
             }else{
                 binding.cardNav.visibility = View.VISIBLE
             }
-
         }
     }
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/margin_350"
+    android:layout_height="@dimen/margin_330"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_89"
+    tools:context=".ui.basket_fragment.BasketPurchasedFragment">
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="@dimen/margin_84"
+        android:layout_height="@dimen/margin_84"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_66"
+        android:src="@drawable/ic_check_yellow"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_47"
+        android:fontFamily="@font/roboto"
+        android:text="@string/order_registered"
+        android:textSize="@dimen/size_16" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_2"
+        android:fontFamily="@font/roboto"
+        android:text="@string/will_contact_you_soon"
+        android:textSize="@dimen/size_16" />
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/btn_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_2"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_25"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:background="@drawable/bg_btn_active"
+        android:text="@string/to_home" />
+
+</RelativeLayout>

@@ -39,4 +39,19 @@
     <string name="price">2500 сом</string>
     <string name="sizes">Размеры</string>
     <string name="describe">Кепка Golden State Warriors Icon 59FIFTY Fitted Cap имеет вышитый логотип Warriors на передних панелях, а также надпись World Champs с дополнительными командными нашивками и вышивкой по всей остальной части короны. Дополнительные детали включают цветной логотип NBA команды сзади и серый нижний слой.</string>
+    <string name="basket">Корзина</string>
+    <string name="golden_state_warriors_icon">Golden State Warriors Icon</string>
+    <string name="_59fifty_fitted_cap">59FIFTY Fitted Cap</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="one">1</string>
+    <string name="m">M</string>
+    <string name="sum">Сумма</string>
+    <string name="delivery">Доставка</string>
+    <string name="_2750">2750 сом</string>
+    <string name="_250">250 сом</string>
+    <string name="purchase">Купить</string>
+    <string name="to_home">На главную</string>
+    <string name="will_contact_you_soon">Ожидайте, очень скоро с Вами свяжутся.</string>
+    <string name="order_registered">Ваш заказ принят.</string>
 </resources>
