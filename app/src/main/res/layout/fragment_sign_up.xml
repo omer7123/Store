@@ -43,7 +43,8 @@
             android:autofillHints="username"
             android:drawableStart="@drawable/ic_user"
             android:hint="@string/signup_et_name"
-            android:inputType="textCapCharacters"
+            android:inputType="textPersonName"
+            android:textAllCaps="false"
             android:textColor="@color/label_black_100"
             android:textStyle="bold" />
 
@@ -52,11 +53,10 @@
             style="@style/et_signup"
             android:layout_below="@id/et_signup_name"
             android:layout_marginTop="@dimen/margin_10"
-            android:autofillHints="phone"
+            android:autofillHints="emailAddress"
             android:drawableStart="@drawable/ic_phone"
-            android:hint="@string/signup_et_phone"
-            android:inputType="phone"
-            android:maxLength="16"
+            android:hint="@string/email"
+            android:inputType="textWebEmailAddress"
             android:textColor="@color/label_black_100"
             android:textStyle="bold" />
 
@@ -73,6 +73,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:imeOptions="actionDone"
             android:id="@+id/et_signup_confirm_pass"
             style="@style/et_signup"
             android:layout_below="@id/et_signup_password"

@@ -54,4 +54,5 @@
     <string name="to_home">На главную</string>
     <string name="will_contact_you_soon">Ожидайте, очень скоро с Вами свяжутся.</string>
     <string name="order_registered">Ваш заказ принят.</string>
+    <string name="email">Email</string>
 </resources>
