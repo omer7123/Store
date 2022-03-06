@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit
         return Retrofit.Builder()
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://80.87.198.187:8002/")
+            .baseUrl("http://80.87.198.187:8002/api/v1/")
             .build()
     }
     fun provideApi(retrofit: Retrofit): StoreApi = retrofit.create(StoreApi::class.java)

@@ -43,8 +43,8 @@
             android:autofillHints="phone"
             android:drawableStart="@drawable/ic_phone"
             android:hint="@string/signup_et_phone"
-            android:inputType="phone"
-            android:maxLength="16"
+            android:inputType="textWebEmailAddress"
+            android:maxLength="200"
             android:textColor="@color/label_black_100"
             android:textStyle="bold" />
 
