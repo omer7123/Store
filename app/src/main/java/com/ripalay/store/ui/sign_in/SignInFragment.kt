@@ -45,7 +45,8 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
         binding.btnSignIn.setOnClickListener {
             val email: String = binding.etSignInPhone.text.toString()
             val password: String = binding.etSignInPassword.text.toString()
-            viewModel.postLogin(Register(0, email, "", password, password)).observe(this) {
+
+            viewModel.postLogin(Register( email, "", password)).observe(this) {
                 when (it.status) {
                     Status.SUCCESS -> {
                         Log.e("ololo", it.data.toString())

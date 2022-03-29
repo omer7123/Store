@@ -7,20 +7,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ripalay.store.R
-import com.ripalay.store.data.remote.models.Result
+import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.ItemProductBinding
 import com.ripalay.store.domain.models.CapsCallback
 import com.ripalay.store.extensions.load
-import org.koin.core.KoinApplication.Companion.init
 
 
 class CatalogueAdapter(
-    private val list: List<Result>,
-    private val clickListener: (result: Result) -> Unit
+    private val list: List<Results>,
+    private val clickListener: (result: Results) -> Unit
 ) :
-    ListAdapter<Result, CatalogueAdapter.ViewHolder>(CapsCallback()) {
+    ListAdapter<Results, CatalogueAdapter.ViewHolder>(CapsCallback()) {
 
-    var onItemClick: ((Result) -> Unit)? = null
+    var onItemClick: ((Results) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatalogueAdapter.ViewHolder {
         val binding = ItemProductBinding.inflate(
@@ -46,10 +45,10 @@ class CatalogueAdapter(
         //  var d: Drawable = Resources(android.R.drawable.ic_dialog_email)
 
         @SuppressLint("SetTextI18n", "ResourceType")
-        fun bind(result: Result) {
+        fun bind(result: Results) {
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
-            binding.ivProduct.load(result.image.toString())
+            binding.ivProduct.load(result.capsImage.toString())
             binding.tvPrice.text = "${result.price} сом"
             binding.ivLike.setOnClickListener {
                 result.isFavorite = !result.isFavorite

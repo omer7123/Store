@@ -49,16 +49,19 @@ class SignUpFragment :
         binding.tvEnter.setOnClickListener {
             navController.navigate(R.id.signInFragment)
         }
+        binding.etSignupPassword.addTextChangedListener { password ->
+            binding.etSignupConfirmPass.addTextChangedListener { passwordConfirm ->
+                binding.btnSignup.isEnabled = password.toString() == passwordConfirm.toString()
+            }
+        }
         binding.btnSignup.setOnClickListener {
             val username: String = binding.etSignupName.text.toString()
             val password: String = binding.etSignupPassword.text.toString()
-            val password2 :String = binding.etSignupConfirmPass.text.toString()
             val email: String = binding.etSignupPhone.text.toString()
 
-            viewModel.postRegister(Register(0, email, username, password, password2)).observe(this) {
+            viewModel.postRegister(Register(email, username, password)).observe(this) {
                 when (it.status) {
                     Status.SUCCESS -> {
-
                         Log.e("REGISTER", "SUCCESS")
                     }
                     Status.ERROR -> {

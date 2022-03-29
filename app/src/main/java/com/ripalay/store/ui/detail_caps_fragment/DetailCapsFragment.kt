@@ -1,13 +1,11 @@
 package com.ripalay.store.ui.detail_caps_fragment
 
-import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
 import com.ripalay.store.core.network.result.Status
 import com.ripalay.store.core.ui.BaseFragment
-import com.ripalay.store.data.remote.models.Result
+import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.FragmentDetailCapsBinding
 import com.ripalay.store.extensions.load
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -32,11 +30,11 @@ class DetailCapsFragment :
         }
     }
 
-    private fun updateView(item: Result?) {
+    private fun updateView(item: Results?) {
         binding.describeTv.text = item?.description.toString()
-        binding.imageIv.load(item!!.image.toString())
+        binding.imageIv.load(item!!.capsImage.toString())
         binding.nameCapTv.text = item.name.toString()
         binding.priceTv.text = item.price.toString()
-        Log.e("ololo", item.image.toString())
+        Log.e("ololo", item.capsImage.toString())
     }
 }

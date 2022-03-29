@@ -15,7 +15,7 @@ interface StoreApi {
         @Query("id") id: String
     ): Response<Caps>
 
-    @POST("users/register/")
+    @POST("auth/users/")
     suspend fun postRegister(
         @Body register: Register
     ): Response<Register>

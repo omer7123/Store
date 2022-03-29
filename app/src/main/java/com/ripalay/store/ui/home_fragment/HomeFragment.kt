@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
 import com.ripalay.store.core.ui.BaseFragment
-import com.ripalay.store.data.remote.models.Result
+import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.FragmentHomeBinding
 import com.ripalay.store.domain.models.Brands
 import com.ripalay.store.ui.catalogue.CatalogueAdapter
@@ -19,13 +19,13 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
     override val binding: FragmentHomeBinding by viewBinding()
     private lateinit var navController: NavController
 
-    private var productList = mutableListOf<Result>()
+    private var productList = mutableListOf<Results>()
     private var brandsList = mutableListOf<Brands>()
     private val catalogueAdapter: CatalogueAdapter by lazy {
         CatalogueAdapter(productList, this::clickListener)
     }
 
-    private fun clickListener(productList: Result) {
+    private fun clickListener(productList: Results) {
 
     }
 

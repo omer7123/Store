@@ -3,7 +3,6 @@ package com.ripalay.store.ui.catalogue
 import android.os.Bundle
 import android.util.Log
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -11,7 +10,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
 import com.ripalay.store.core.network.result.Status
 import com.ripalay.store.core.ui.BaseFragment
-import com.ripalay.store.data.remote.models.Result
+import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.FragmentCatalogueBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -26,9 +25,13 @@ class CatalogueFragment :
 
     override fun initObservers() {
         super.initObservers()
+        viewModel.getCaps().observe(this){
+            Log.e("oloo", it.data.toString())
+        }
         viewModel.getCaps().observe(this) {
             when (it.status) {
                 Status.SUCCESS -> {
+                    Log.e("plpo", it.data.toString())
                     val item = it.data
                     adapter = CatalogueAdapter(
                         item?.results!!,
@@ -36,24 +39,24 @@ class CatalogueFragment :
                     )
                     binding.recyclerCatalogue.adapter = adapter
                     viewModel.loading.postValue(false)
-                    Log.e("ololo", item.toString())
                 }
                 Status.LOADING -> {
+                    Log.e("ololo", "Loading")
                     viewModel.loading.postValue(true)
                 }
             }
         }
     }
 
-    private fun clickListener(result: Result) {
+    private fun clickListener(result: Results) {
         val bundle = Bundle()
         bundle.putString("id", result.id.toString())
         navController.navigate(R.id.detailCapsFragment, bundle)
         adapter.onItemClick = {
-            if (result.isFavorite){
+            if (result.isFavorite) {
                 Log.e("ololo", it.toString())
                 //Отправляем на бэк модель
-            }else{
+            } else {
                 //Удаляем модель с бэка
             }
         }
