@@ -48,7 +48,7 @@ class CatalogueAdapter(
         fun bind(result: Results) {
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
-            binding.ivProduct.load(result.capsImage.toString())
+//            binding.ivProduct.load(result.capsImage.toString())
             binding.tvPrice.text = "${result.price} сом"
             binding.ivLike.setOnClickListener {
                 result.isFavorite = !result.isFavorite
