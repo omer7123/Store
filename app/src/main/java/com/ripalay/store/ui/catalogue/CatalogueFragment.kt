@@ -25,9 +25,6 @@ class CatalogueFragment :
 
     override fun initObservers() {
         super.initObservers()
-        viewModel.getCaps().observe(this){
-            Log.e("oloo", it.data.toString())
-        }
         viewModel.getCaps().observe(this) {
             when (it.status) {
                 Status.SUCCESS -> {

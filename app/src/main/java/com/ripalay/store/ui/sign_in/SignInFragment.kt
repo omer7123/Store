@@ -26,13 +26,14 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
     private lateinit var navController: NavController
 
     override fun initViews() {
-        binding.etSignInPhone.addTextChangedListener(PhoneNumberFormattingTextWatcher())
-        textWatcher(binding.etSignInPhone, R.drawable.ic_phone, R.drawable.ic_phone_selected)
-        textWatcher(
-            binding.etSignInPassword,
-            R.drawable.ic_password,
-            R.drawable.ic_password_selected
-        )
+//        binding.etSignInPhone.addTextChangedListener(PhoneNumberFormattingTextWatcher())
+//        textWatcher(binding.etSignInPhone, R.drawable.ic_phone, R.drawable.ic_phone_selected)
+//        textWatcher(
+//            binding.etSignInPassword,
+//            R.drawable.ic_password,
+//            R.drawable.ic_password_selected
+//        )
+
     }
 
     override fun initListeners() {

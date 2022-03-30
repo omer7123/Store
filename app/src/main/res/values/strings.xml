@@ -55,4 +55,6 @@
     <string name="will_contact_you_soon">Ожидайте, очень скоро с Вами свяжутся.</string>
     <string name="order_registered">Ваш заказ принят.</string>
     <string name="email">Email</string>
+    <string name="check_email">Вы успешно зарегестрировались, пожалуйста, проверьте почту</string>
+    <string name="name">Имя</string>
 </resources>

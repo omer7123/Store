@@ -40,10 +40,10 @@
             style="@style/et_signup"
             android:layout_below="@id/divider"
             android:layout_marginTop="@dimen/margin_28"
-            android:autofillHints="phone"
+            android:autofillHints="username"
             android:drawableStart="@drawable/ic_phone"
-            android:hint="@string/signup_et_phone"
-            android:inputType="textWebEmailAddress"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
             android:maxLength="200"
             android:textColor="@color/label_black_100"
             android:textStyle="bold" />

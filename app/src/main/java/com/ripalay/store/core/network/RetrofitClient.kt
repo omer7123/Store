@@ -32,7 +32,7 @@ val networkModule = module {
         return Retrofit.Builder()
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://164.92.190.147:8000/api/v1/")
+            .baseUrl("http://164.92.190.147:8000/")
             .build()
     }
     fun provideApi(retrofit: Retrofit): StoreApi = retrofit.create(StoreApi::class.java)

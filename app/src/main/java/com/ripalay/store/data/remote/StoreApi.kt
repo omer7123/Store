@@ -7,10 +7,10 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface StoreApi {
-    @GET("caps/")
+    @GET("api/v1/caps/")
     suspend fun getCaps(): Response<Caps>
 
-    @GET("caps/")
+    @GET("api/v1/caps/")
     suspend fun getCapsId(
         @Query("id") id: String
     ): Response<Caps>
