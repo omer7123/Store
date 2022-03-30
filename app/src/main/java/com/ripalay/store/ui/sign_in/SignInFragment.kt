@@ -33,7 +33,13 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
 //            R.drawable.ic_password,
 //            R.drawable.ic_password_selected
 //        )
-
+        binding.btnSignIn.setBackgroundResource(R.drawable.bg_btn_active)
+        binding.btnSignIn.setTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.white
+            )
+        )
     }
 
     override fun initListeners() {
@@ -44,10 +50,10 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
             navController.navigate(R.id.passwordRecoveryFragment)
         }
         binding.btnSignIn.setOnClickListener {
-            val email: String = binding.etSignInPhone.text.toString()
+            val username: String = binding.etSignInPhone.text.toString()
             val password: String = binding.etSignInPassword.text.toString()
 
-            viewModel.postLogin(Register( email, "", password)).observe(this) {
+            viewModel.postLogin(Register("", username, password)).observe(this) {
                 when (it.status) {
                     Status.SUCCESS -> {
                         Log.e("ololo", it.data.toString())

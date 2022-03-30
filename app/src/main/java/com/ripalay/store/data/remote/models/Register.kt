@@ -5,3 +5,7 @@ data class Register(
     val username: String,
     val password: String,
 )
+data class Tokens(
+    val refresh: String,
+    val access: String
+)
