@@ -23,18 +23,23 @@ class DetailCapsFragment :
         viewModel.getCapId(bundle?.getString("id").toString()).observe(this) {
             when (it.status) {
                 Status.SUCCESS -> {
-                    val item = it.data?.results?.get(0)
+                    val item = it.data
+                    Log.e("ololo", item.toString())
                     updateView(item)
+                }
+                Status.LOADING->{
+                    Log.e("LOADING DEETAIL","YS")
                 }
             }
         }
     }
 
     private fun updateView(item: Results?) {
+        binding.brandNameTv.text = item?.brand.toString()
         binding.describeTv.text = item?.description.toString()
-        binding.imageIv.load(item!!.capsImage.toString())
-        binding.nameCapTv.text = item.name.toString()
-        binding.priceTv.text = item.price.toString()
-        Log.e("ololo", item.capsImage.toString())
+//        binding.imageIv.load(item!!.capsImage.toString())
+        binding.nameCapTv.text = item?.name.toString()
+        binding.priceTv.text = item?.price.toString()
+//        Log.e("ololo", item?.capsImage.toString())
     }
 }

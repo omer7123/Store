@@ -6,6 +6,7 @@ import com.ripalay.store.core.network.result.Resource
 import com.ripalay.store.data.remote.RemoteDataSource
 import com.ripalay.store.data.remote.models.Caps
 import com.ripalay.store.data.remote.models.Register
+import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.data.remote.models.Tokens
 import kotlinx.coroutines.Dispatchers
 
@@ -16,7 +17,7 @@ class Repository(private val dataSource: RemoteDataSource) {
         emit(response)
     }
 
-    fun getCapsID(id: String): LiveData<Resource<Caps>> = liveData(Dispatchers.IO) {
+    fun getCapsID(id: String): LiveData<Resource<Results>> = liveData(Dispatchers.IO) {
         emit(Resource.loading())
         val response = dataSource.getCapsId(id)
         emit(response)
