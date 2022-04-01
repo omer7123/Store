@@ -10,12 +10,21 @@ data class Results(
     @SerializedName("new_price")
     val newPrice: Int,
     @SerializedName("capsimage")
-    val capsImage: String?,
+    val capsImage: List<CapsImage?>,
 
     val created: String?,
     val description: String?,
 
-    val size: List<Int>?,
+    val size: List<Size>?,
     val updated: String?,
     var isFavorite: Boolean = false
+)
+
+data class CapsImage(
+    val image: String
+)
+
+data class Size(
+    val id: Int,
+    val value: String
 )
