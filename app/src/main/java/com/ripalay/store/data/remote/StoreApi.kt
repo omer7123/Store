@@ -25,4 +25,10 @@ interface StoreApi {
 
     @GET("api/v1/caps/brand/")
     suspend fun getBrands(): Response<BrandsRemote>
+
+    @GET("/api/v1/caps/brand/{name}/")
+    suspend fun getCapsBrand(
+        @Path("name") brandName:String
+    )
+    :Response<Caps>
 }

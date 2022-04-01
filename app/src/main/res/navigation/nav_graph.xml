@@ -86,4 +86,9 @@
         android:id="@+id/notificationSignUpFragment"
         android:name="com.ripalay.store.ui.sign_up.NotificationSignUpFragment"
         android:label="NotificationSignUpFragment" />
+    <fragment
+        android:id="@+id/capsByBrandFragment"
+        android:name="com.ripalay.store.ui.caps_by_brand.CapsByBrandFragment"
+        android:label="fragment_caps_by_brand"
+        tools:layout="@layout/fragment_caps_by_brand" />
 </navigation>

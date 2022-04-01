@@ -89,5 +89,6 @@
     <dimen name="margin_47">47dp</dimen>
     <dimen name="margin_25">25dp</dimen>
     <dimen name="margin_350">350dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
 
 </resources>

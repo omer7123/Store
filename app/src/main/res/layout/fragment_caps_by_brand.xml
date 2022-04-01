@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.caps_by_brand.CapsByBrandFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/margin_44"
+        android:layout_height="@dimen/margin_44"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_72"
+        android:background="@drawable/bg_circle_btn"
+        android:backgroundTint="#12121D0D"
+        android:drawableBottom="@drawable/ic_chevronleft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/brand_name_tv"
+        android:lineHeight="@dimen/margin_32"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_28"
+        android:fontFamily="@font/sf_ui_display_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_30"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"
+        tools:text="@string/new_era"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_catalogue"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        app:spanCount="2"
+        android:layout_marginTop="@dimen/margin_18"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        app:layout_constraintTop_toBottomOf="@id/brand_name_tv"
+        tools:listitem="@layout/item_product" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

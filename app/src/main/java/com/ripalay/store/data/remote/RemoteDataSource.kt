@@ -29,4 +29,8 @@ class RemoteDataSource(private val storeApi: StoreApi) : BaseDataSource() {
     suspend fun getBrands() = getResult {
         storeApi.getBrands()
     }
+
+    suspend fun getCapsBrand(name:String) = getResult {
+        storeApi.getCapsBrand(name)
+    }
 }

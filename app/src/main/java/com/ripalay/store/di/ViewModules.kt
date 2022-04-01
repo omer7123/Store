@@ -1,5 +1,6 @@
 package com.ripalay.store.di
 
+import com.ripalay.store.ui.caps_by_brand.CapsByBrandViewModel
 import com.ripalay.store.ui.catalogue.CatalogueViewModel
 import com.ripalay.store.ui.detail_caps_fragment.DetailCapsViewModel
 import com.ripalay.store.ui.home_fragment.HomeViewModel
@@ -15,4 +16,5 @@ val viewModules: Module = module {
     viewModel { SignUpViewModel(get()) }
     viewModel { SignInViewModel(get()) }
     viewModel { HomeViewModel(get()) }
+    viewModel { CapsByBrandViewModel(get()) }
 }

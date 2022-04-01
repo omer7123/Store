@@ -23,8 +23,6 @@ class DetailCapsFragment :
     override fun initObservers() {
         super.initObservers()
         val bundle = arguments
-        bundle?.getString("id")
-            Log.e("ROOM",App.database.loginDao().getLogin().toString())
         viewModel.getCapId(bundle?.getString("id").toString()).observe(this) {
             when (it.status) {
                 Status.SUCCESS -> {

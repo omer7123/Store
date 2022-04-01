@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.ItemProductPromotionBinding
 import com.ripalay.store.domain.models.CapsCallback
+import com.ripalay.store.extensions.load
 
 class PromotionsAdapter (private val list: List<Results>)
     : ListAdapter<Results, PromotionsAdapter.ViewHolder>(CapsCallback()) {
@@ -33,9 +34,11 @@ class PromotionsAdapter (private val list: List<Results>)
 
         @SuppressLint("SetTextI18n")
         fun bind(result: Results) {
+            binding.ivProduct.load(result.capsImage[0].toString())
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
-            binding.tvNewPrice.text = "${result.price} сом"
+            binding.tvNewPrice.text = "${result.newPrice} сом"
+            binding.tvOldPrice.text = "${result.price} сом"
 //            binding.tvOldPrice.text = "${product.oldPrice} сом"
         }
     }
