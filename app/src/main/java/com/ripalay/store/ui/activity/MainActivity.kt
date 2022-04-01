@@ -1,25 +1,62 @@
-package com.ripalay.store
+package com.ripalay.store.ui.activity
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import com.ripalay.store.App
+import com.ripalay.store.R
+import com.ripalay.store.core.network.result.Status
 import com.ripalay.store.core.ui.BaseActivity
 import com.ripalay.store.databinding.ActivityMainBinding
 import com.ripalay.store.core.ui.BaseViewModel
+import com.ripalay.store.data.local.prefs.Prefs
+import com.ripalay.store.data.remote.models.Tokens
+import com.ripalay.store.ui.sign_in.SignInViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
+class MainActivity : BaseActivity<SignInViewModel, ActivityMainBinding>() {
 
     private lateinit var navController: NavController
 
+    override val viewModel: SignInViewModel by viewModel()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         initNavControllerWithBottomNav()
         initDestination()
+        initCheckLog()
+    }
+
+    override fun initView() {
+        super.initView()
+        viewModel.loading.observe(this){
+            binding.progress.isVisible = it
+        }
+    }
+    private fun initCheckLog() {
+        if (!App.database.loginDao().getLogin().get(0).toString().isEmpty()) {
+            viewModel.postLogin(App.database.loginDao().getLogin().get(0)).observe(this) {
+                when (it.status) {
+                    Status.SUCCESS -> {
+                        val prefs = Prefs(this)
+                        val tokens: Tokens? = it.data
+                        prefs.saveAccess(tokens?.access.toString())
+                        navController.navigate(R.id.action_startFragment_to_homeFragment2)
+                        viewModel.loading.postValue(false)
+                    }
+                    Status.ERROR -> {
+                        viewModel.loading.postValue(false)
+                    }
+                    Status.LOADING->{
+                        viewModel.loading.postValue(true)
+                    }
+                }
+            }
+        }
     }
 
 
@@ -36,7 +73,7 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
                 destination.id == R.id.createNewPasswordFragment
             ) {
                 binding.cardNav.visibility = View.GONE
-            }else{
+            } else {
                 binding.cardNav.visibility = View.VISIBLE
             }
         }

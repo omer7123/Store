@@ -21,6 +21,34 @@ class SignUpFragment :
     override val binding: FragmentSignUpBinding by viewBinding()
     private lateinit var navController: NavController
 
+    override fun initListeners() {
+        binding.tvEnter.setOnClickListener {
+            navController.navigate(R.id.signInFragment)
+        }
+
+        binding.btnSignup.setOnClickListener {
+            val username: String = binding.etSignupName.text.toString()
+            val password: String = binding.etSignupPassword.text.toString()
+            val email: String = binding.etSignupPhone.text.toString()
+
+            viewModel.postRegister(Register(null,email, username, password)).observe(this) {
+                when (it.status) {
+                    Status.SUCCESS -> {
+                        navController.popBackStack()
+                        navController.navigate(R.id.notificationSignUpFragment)
+                        Log.e("REGISTER", "SUCCESS")
+                    }
+                    Status.ERROR -> {}
+                    Status.LOADING -> {
+                        viewModel.loading.postValue(true)
+                    }
+                }
+            }
+        }
+    }
+
+
+
     override fun initViews() {
 //        textWatcher(binding.etSignupName, R.drawable.ic_user, R.drawable.ic_user_selected)
 //        textWatcher(binding.etSignupPhone, R.drawable.ic_phone, R.drawable.ic_phone_selected)
@@ -65,34 +93,6 @@ class SignUpFragment :
 
 
     }
-
-    override fun initListeners() {
-        binding.tvEnter.setOnClickListener {
-            navController.navigate(R.id.signInFragment)
-        }
-
-        binding.btnSignup.setOnClickListener {
-            val username: String = binding.etSignupName.text.toString()
-            val password: String = binding.etSignupPassword.text.toString()
-            val email: String = binding.etSignupPhone.text.toString()
-
-            viewModel.postRegister(Register(email, username, password)).observe(this) {
-                when (it.status) {
-                    Status.SUCCESS -> {
-                        navController.popBackStack()
-                        navController.navigate(R.id.notificationSignUpFragment)
-                        Log.e("REGISTER", "SUCCESS")
-                    }
-                    Status.ERROR -> {}
-                    Status.LOADING -> {
-                        viewModel.loading.postValue(true)
-                    }
-                }
-            }
-        }
-    }
-
-
 //    private fun textWatcher(et: EditText, ic: Int, ic2: Int) {
 //        et.doAfterTextChanged {
 //            if (it.toString().isEmpty()) {

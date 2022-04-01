@@ -9,15 +9,14 @@ import org.koin.core.context.startKoin
 
 class App : Application() {
 
-    var instance: App? = null
-    private var database: AppDataBase? = null
+    private lateinit var instance: App
+//    private lateinit var database: AppDataBase
 
 
     override fun onCreate() {
         super.onCreate()
-        instance = this
         database = Room
-            .databaseBuilder(this, AppDataBase::class.java, "database.db")
+            .databaseBuilder(applicationContext, AppDataBase::class.java, "database.db")
             .allowMainThreadQueries()
             .build()
 
@@ -27,12 +26,11 @@ class App : Application() {
         }
     }
 
-    @JvmName("getInstance1")
-    fun getInstance(): App? {
-        return instance
+    companion object {
+        lateinit var database: AppDataBase
+        lateinit var instance: App
     }
 
-    fun getDatabase(): AppDataBase? {
-        return database
-    }
+
+
 }

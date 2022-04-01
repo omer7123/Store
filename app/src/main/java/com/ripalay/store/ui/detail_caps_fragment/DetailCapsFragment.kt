@@ -23,9 +23,7 @@ class DetailCapsFragment :
         super.initObservers()
         val bundle = arguments
         bundle?.getString("id")
-        viewModel.viewModelScope.launch {
-            Log.e("ololo",App().getInstance()?.getDatabase()?.loginDao()?.getLogin().toString())
-        }
+            Log.e("ROOM",App.database.loginDao().getLogin().toString())
         viewModel.getCapId(bundle?.getString("id").toString()).observe(this) {
             when (it.status) {
                 Status.SUCCESS -> {

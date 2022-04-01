@@ -4,6 +4,7 @@ import android.util.Log
 import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -53,16 +54,19 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
             val username: String = binding.etSignInPhone.text.toString()
             val password: String = binding.etSignInPassword.text.toString()
 
-            viewModel.postLogin(Register("", username, password)).observe(this) {
+            viewModel.postLogin(Register(null, "", username, password)).observe(this) {
                 when (it.status) {
                     Status.SUCCESS -> {
-                        App().getInstance()?.getDatabase()?.loginDao()
-                            ?.addLoginItem(Register("", username, password))
-                        Log.e("ololo", it.data.toString())
+                        App.database.loginDao().deleteList(App.database.loginDao().getLogin())
+                        App.database.loginDao().addLoginItem(Register(null, "", username, password))
                         val prefs = Prefs(requireContext())
                         val tokens: Tokens? = it.data
                         prefs.saveAccess(tokens?.access.toString())
-                        navController.navigate(R.id.homeFragment2)
+                        navController.navigate(R.id.action_startFragment_to_homeFragment2)
+                        viewModel.loading.postValue(false)
+                    }
+                    Status.LOADING -> {
+                        viewModel.loading.postValue(true)
                     }
                 }
             }
@@ -96,6 +100,13 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
                     )
                 )
             }
+        }
+    }
+
+    override fun initObservers() {
+        super.initObservers()
+        viewModel.loading.observe(requireActivity()){
+            binding.progress.isVisible = it
         }
     }
 

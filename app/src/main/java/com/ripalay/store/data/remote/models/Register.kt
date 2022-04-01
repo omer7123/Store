@@ -5,8 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "login_items")
 data class Register(
-    @PrimaryKey
-
+    @PrimaryKey(autoGenerate = true)
+    val id: Int?,
     val email: String,
     val username: String,
     val password: String,
