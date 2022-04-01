@@ -27,6 +27,10 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(R.layout.f
         CatalogueAdapter(productList, this::clickListener)
     }
 
+    override fun initObservers() {
+        super.initObservers()
+
+    }
     private fun clickListener(productList: Results) {
 
     }

@@ -178,6 +178,7 @@
             android:layout_marginTop="@dimen/margin_12"
             android:minHeight="@dimen/margin_240"
             android:orientation="horizontal"
+            app:flow_maxElementsWrap="10"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
