@@ -1,25 +1,21 @@
 package com.ripalay.store.ui.sign_in
 
-import android.telephony.PhoneNumberFormattingTextWatcher
 import android.util.Log
 import android.widget.EditText
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.widget.doAfterTextChanged
-import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.ripalay.store.App
 import com.ripalay.store.R
 import com.ripalay.store.core.network.result.Status
 import com.ripalay.store.core.ui.BaseFragment
-import com.ripalay.store.core.ui.BaseViewModel
-import com.ripalay.store.data.prefs.Prefs
+import com.ripalay.store.data.local.prefs.Prefs
 import com.ripalay.store.data.remote.models.Register
 import com.ripalay.store.data.remote.models.Tokens
 import com.ripalay.store.databinding.FragmentSignInBinding
-import com.ripalay.store.extensions.showToast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
@@ -60,6 +56,8 @@ class SignInFragment : BaseFragment<SignInViewModel, FragmentSignInBinding>
             viewModel.postLogin(Register("", username, password)).observe(this) {
                 when (it.status) {
                     Status.SUCCESS -> {
+                        App().getInstance()?.getDatabase()?.loginDao()
+                            ?.addLoginItem(Register("", username, password))
                         Log.e("ololo", it.data.toString())
                         val prefs = Prefs(requireContext())
                         val tokens: Tokens? = it.data

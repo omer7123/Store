@@ -1,6 +1,12 @@
 package com.ripalay.store.data.remote.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "login_items")
 data class Register(
+    @PrimaryKey
+
     val email: String,
     val username: String,
     val password: String,

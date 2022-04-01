@@ -1,4 +1,4 @@
-package com.ripalay.store.data.prefs
+package com.ripalay.store.data.local.prefs
 
 import android.content.Context
 import android.content.SharedPreferences

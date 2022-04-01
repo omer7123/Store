@@ -1,13 +1,16 @@
 package com.ripalay.store.ui.detail_caps_fragment
 
 import android.util.Log
+import androidx.lifecycle.viewModelScope
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.ripalay.store.App
 import com.ripalay.store.R
 import com.ripalay.store.core.network.result.Status
 import com.ripalay.store.core.ui.BaseFragment
 import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.FragmentDetailCapsBinding
 import com.ripalay.store.extensions.load
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailCapsFragment :
@@ -20,6 +23,9 @@ class DetailCapsFragment :
         super.initObservers()
         val bundle = arguments
         bundle?.getString("id")
+        viewModel.viewModelScope.launch {
+            Log.e("ololo",App().getInstance()?.getDatabase()?.loginDao()?.getLogin().toString())
+        }
         viewModel.getCapId(bundle?.getString("id").toString()).observe(this) {
             when (it.status) {
                 Status.SUCCESS -> {

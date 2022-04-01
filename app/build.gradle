@@ -13,8 +13,10 @@ android {
         versionCode 1
         versionName "1.0"
 
+        apply plugin: 'kotlin-kapt'
+
+
         buildConfigField "String", "BASE_URL", "\"https://www.googleapis.com/youtube/v3/\""
-        buildConfigField "String", "API_KEY", "\"AIzaSyDTd0b36aXwII5lNZaZAWv1D0SbOa7WFu4\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -68,9 +70,10 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     // Room
-    def room_version = "2.3.0"
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    def room_version = "2.4.1"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
 
     // CardView
     implementation "androidx.cardview:cardview:1.0.0"

@@ -7,11 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ripalay.store.R
 import com.ripalay.store.core.ui.BaseFragment
-import com.ripalay.store.data.prefs.Prefs
 import com.ripalay.store.data.remote.models.Results
 import com.ripalay.store.databinding.FragmentHomeBinding
 import com.ripalay.store.domain.models.Brands
-import com.ripalay.store.extensions.showToast
 import com.ripalay.store.ui.catalogue.CatalogueAdapter
 import com.ripalay.store.ui.promotions.PromotionsAdapter
 
