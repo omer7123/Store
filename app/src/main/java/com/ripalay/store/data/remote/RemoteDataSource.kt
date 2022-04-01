@@ -25,4 +25,8 @@ class RemoteDataSource(private val storeApi: StoreApi) : BaseDataSource() {
     suspend fun postLogin(register: Register) = getResult {
         storeApi.postLogin(register)
     }
+
+    suspend fun getBrands() = getResult {
+        storeApi.getBrands()
+    }
 }

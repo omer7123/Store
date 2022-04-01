@@ -30,13 +30,11 @@ class CatalogueFragment :
                 Status.SUCCESS -> {
                     Log.e("plpo", it.data.toString())
                     viewModel.loading.postValue(false)
-
                     val item = it.data
                     adapter = CatalogueAdapter(
                         item?.results!!,
                         this::clickListener
                     )
-
                     binding.recyclerCatalogue.adapter = adapter
                 }
                 Status.LOADING -> {

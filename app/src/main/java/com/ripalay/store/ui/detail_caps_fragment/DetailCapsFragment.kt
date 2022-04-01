@@ -1,5 +1,6 @@
 package com.ripalay.store.ui.detail_caps_fragment
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.viewModelScope
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -38,12 +39,13 @@ class DetailCapsFragment :
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateView(item: Results?) {
         binding.brandNameTv.text = item?.brand.toString()
         binding.describeTv.text = item?.description.toString()
-//        binding.imageIv.load(item!!.capsImage.toString())
-        binding.nameCapTv.text = item?.name.toString()
-        binding.priceTv.text = item?.price.toString()
+        binding.imageIv.load(item!!.capsImage[0].toString())
+        binding.nameCapTv.text = item.name.toString()
+        binding.priceTv.text = "${item.price} сом"
 //        Log.e("ololo", item?.capsImage.toString())
     }
 }

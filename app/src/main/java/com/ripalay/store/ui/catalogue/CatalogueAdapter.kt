@@ -39,16 +39,13 @@ class CatalogueAdapter(
 
     inner class ViewHolder(itemBinding: ItemProductBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-
         private val binding = itemBinding
-        // val int = Re
-        //  var d: Drawable = Resources(android.R.drawable.ic_dialog_email)
 
         @SuppressLint("SetTextI18n", "ResourceType")
         fun bind(result: Results) {
+            binding.ivProduct.load(result.capsImage[0].toString())
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
-//            binding.ivProduct.load(result.capsImage.toString())
             binding.tvPrice.text = "${result.price} сом"
             binding.ivLike.setOnClickListener {
                 result.isFavorite = !result.isFavorite

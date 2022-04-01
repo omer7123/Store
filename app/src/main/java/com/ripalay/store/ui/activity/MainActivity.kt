@@ -1,6 +1,7 @@
 package com.ripalay.store.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.isVisible
@@ -38,7 +39,8 @@ class MainActivity : BaseActivity<SignInViewModel, ActivityMainBinding>() {
         }
     }
     private fun initCheckLog() {
-        if (!App.database.loginDao().getLogin().get(0).toString().isEmpty()) {
+        Log.e("ROOM",App.database.loginDao().getLogin().toString())
+        if (App.database.loginDao().getLogin().isNotEmpty()) {
             viewModel.postLogin(App.database.loginDao().getLogin().get(0)).observe(this) {
                 when (it.status) {
                     Status.SUCCESS -> {

@@ -4,10 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.ripalay.store.core.network.result.Resource
 import com.ripalay.store.data.remote.RemoteDataSource
-import com.ripalay.store.data.remote.models.Caps
-import com.ripalay.store.data.remote.models.Register
-import com.ripalay.store.data.remote.models.Results
-import com.ripalay.store.data.remote.models.Tokens
+import com.ripalay.store.data.remote.models.*
 import kotlinx.coroutines.Dispatchers
 
 class Repository(private val dataSource: RemoteDataSource) {
@@ -36,4 +33,11 @@ class Repository(private val dataSource: RemoteDataSource) {
         val response = dataSource.postLogin(register)
         emit(response)
     }
+
+    fun getBrands():LiveData<Resource<BrandsRemote>> = liveData(Dispatchers.IO){
+        emit(Resource.loading())
+        val response = dataSource.getBrands()
+        emit(response)
+    }
+
 }

@@ -1,9 +1,6 @@
 package com.ripalay.store.data.remote
 
-import com.ripalay.store.data.remote.models.Caps
-import com.ripalay.store.data.remote.models.Register
-import com.ripalay.store.data.remote.models.Results
-import com.ripalay.store.data.remote.models.Tokens
+import com.ripalay.store.data.remote.models.*
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -25,4 +22,7 @@ interface StoreApi {
     suspend fun postLogin(
         @Body register: Register
     ): Response<Tokens>
+
+    @GET("api/v1/caps/brand/")
+    suspend fun getBrands(): Response<BrandsRemote>
 }

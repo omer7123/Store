@@ -2,6 +2,7 @@ package com.ripalay.store.di
 
 import com.ripalay.store.ui.catalogue.CatalogueViewModel
 import com.ripalay.store.ui.detail_caps_fragment.DetailCapsViewModel
+import com.ripalay.store.ui.home_fragment.HomeViewModel
 import com.ripalay.store.ui.sign_in.SignInViewModel
 import com.ripalay.store.ui.sign_up.SignUpViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -13,4 +14,5 @@ val viewModules: Module = module {
     viewModel { DetailCapsViewModel(get()) }
     viewModel { SignUpViewModel(get()) }
     viewModel { SignInViewModel(get()) }
+    viewModel { HomeViewModel(get()) }
 }
