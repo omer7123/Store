@@ -37,5 +37,10 @@ class RemoteDataSource(private val storeApi: StoreApi) : BaseDataSource() {
 
     suspend fun updateUser(token: String, userName: String, eMail: String) = getResult {
         storeApi.updateUser(token, userName, eMail)
+        
+
+    suspend fun getCapsBrand(name:String) = getResult {
+        storeApi.getCapsBrand(name)
     }
+    
 }

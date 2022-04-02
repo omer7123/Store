@@ -49,7 +49,7 @@ class MainActivity : BaseActivity<SignInViewModel, ActivityMainBinding>() {
                         val prefs = Prefs(this)
                         val tokens: Tokens? = it.data
                         prefs.saveAccess(tokens?.access.toString())
-                        Log.e("Naima", tokens.toString())
+                        Log.e("token", prefs.getAccess().toString())
                         navController.navigate(R.id.action_startFragment_to_homeFragment2)
                         viewModel.loading.postValue(false)
                     }

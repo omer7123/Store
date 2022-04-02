@@ -37,4 +37,11 @@ interface StoreApi {
         @Field ("username") userName: String,
         @Field("email") eMail: String
     ): Response<User>
+
+    @GET("/api/v1/caps/brand/{name}/")
+    suspend fun getCapsBrand(
+        @Path("name") brandName:String
+    )
+    :Response<Caps>
+
 }

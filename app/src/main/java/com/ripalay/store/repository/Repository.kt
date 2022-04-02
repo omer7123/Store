@@ -1,5 +1,6 @@
 package com.ripalay.store.repository
 
+import android.graphics.Paint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.ripalay.store.core.network.result.Resource
@@ -39,7 +40,7 @@ class Repository(private val dataSource: RemoteDataSource) {
         val response = dataSource.getBrands()
         emit(response)
     }
-
+    
     fun getUser(token: String): LiveData<Resource<User>> = liveData(Dispatchers.IO) {
         emit(Resource.loading())
         val response = dataSource.getUser(token)
@@ -52,5 +53,11 @@ class Repository(private val dataSource: RemoteDataSource) {
             val response = dataSource.updateUser(token, userName, eMail)
             emit(response)
         }
+
+    fun getCapsBrand(name: String):LiveData<Resource<Caps>> = liveData(Dispatchers.IO){
+        emit(Resource.loading())
+        val response = dataSource.getCapsBrand(name)
+        emit(response)
+    }
 
 }

@@ -101,4 +101,9 @@
         android:name="com.ripalay.store.ui.profile.order_details.OrderDetailsFragment"
         android:label="fragment_order_details"
         tools:layout="@layout/fragment_order_details" />
+    <fragment
+        android:id="@+id/capsByBrandFragment"
+        android:name="com.ripalay.store.ui.caps_by_brand.CapsByBrandFragment"
+        android:label="fragment_caps_by_brand"
+        tools:layout="@layout/fragment_caps_by_brand" />
 </navigation>
