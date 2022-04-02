@@ -41,7 +41,7 @@ class DetailCapsFragment :
     private fun updateView(item: Results?) {
         binding.brandNameTv.text = item?.brand.toString()
         binding.describeTv.text = item?.description.toString()
-        binding.imageIv.load(item!!.capsImage[0].toString())
+        binding.imageIv.load(item!!.capsImage[0]!!.image)
         binding.nameCapTv.text = item.name.toString()
         binding.priceTv.text = "${item.price} сом"
 //        Log.e("ololo", item?.capsImage.toString())

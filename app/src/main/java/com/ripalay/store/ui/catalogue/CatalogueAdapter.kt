@@ -43,7 +43,8 @@ class CatalogueAdapter(
 
         @SuppressLint("SetTextI18n", "ResourceType")
         fun bind(result: Results) {
-            binding.ivProduct.load(result.capsImage[0].toString())
+            Log.e("ololo", result.capsImage[0].toString())
+            binding.ivProduct.load(result.capsImage[0]!!.image)
             binding.tvBrandName.text = result.brand.toString()
             binding.tvProductName.text = result.name
             binding.tvPrice.text = "${result.price} сом"
