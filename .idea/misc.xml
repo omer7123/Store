@@ -44,16 +44,23 @@
         <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_dialog_fragment.xml" value="0.2703125" />
         <entry key="..\:/Users/Store/app/src/main/res/drawable/bg_increment_decrement.xml" value="0.2703125" />
         <entry key="..\:/Users/Store/app/src/main/res/drawable/dialog_fragment.xml" value="0.2703125" />
+        <entry key="..\:/Users/Store/app/src/main/res/drawable/ic_back.xml" value="0.2265" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_account.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_basket.xml" value="0.264" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_basket_purchase_list_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_basket_purchased.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_create_new_password.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_detail_caps.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_order_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_orders.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_password_recovery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/item_bottm_sheet_container.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Store/app/src/main/res/layout/item_orders.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/item_product.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/layout/item_product_promotion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Store/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />

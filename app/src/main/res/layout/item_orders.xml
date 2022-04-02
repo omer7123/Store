@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginVertical="@dimen/margin_15">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="@dimen/margin_335"
+        android:layout_height="@dimen/margin_168"
+        android:backgroundTint="@color/light_gray"
+        app:cardCornerRadius="@dimen/margin_20">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_20"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="89475934"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_52"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="Дата:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_84"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="Статус:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_52"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="03.06.2021"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_84"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="В пути"
+            android:textColor="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

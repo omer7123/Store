@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.AccountFragment">
+
+    <TextView
+        android:id="@+id/tv_my_account"
+        style="@style/top_tv_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_74"
+        android:text="@string/my_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="@dimen/margin_24"
+        android:layout_height="@dimen/margin_24"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_50"
+        android:src="@drawable/ic_profile_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_my_account"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_profile"
+        style="@style/tv_profile_types"
+        android:layout_marginStart="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_48"
+        android:text="@string/profile"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_my_account" />
+
+    <ImageView
+        android:id="@+id/iv_orders"
+        android:layout_width="@dimen/margin_24"
+        android:layout_height="@dimen/margin_24"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_22"
+        android:src="@drawable/ic_profile_orders"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_orders"
+        style="@style/tv_profile_types"
+        android:layout_marginStart="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_18"
+        android:text="@string/my_orders"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile" />
+
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="@dimen/margin_24"
+        android:layout_height="@dimen/margin_24"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_22"
+        android:src="@drawable/ic_profile_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_orders"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        style="@style/tv_profile_types"
+        android:layout_marginStart="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_18"
+        android:text="@string/address"
+        app:layout_constraintStart_toEndOf="@id/iv_address"
+        app:layout_constraintTop_toBottomOf="@id/tv_orders" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

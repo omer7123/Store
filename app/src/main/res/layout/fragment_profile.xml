@@ -1,14 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile_fragment.ProfileFragment">
+    tools:context=".ui.profile.profile_fragment.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_back"
+        android:layout_width="@dimen/margin_44"
+        android:layout_height="@dimen/margin_44"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_74"
+        android:backgroundTint="@color/label_black_5"
+        android:elevation="@dimen/margin_0"
+        android:src="@drawable/ic_back"
+        app:borderWidth="@dimen/margin_0"
+        app:elevation="@dimen/margin_0"
+        app:fabCustomSize="@dimen/margin_44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_profile"
+        style="@style/top_tv_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fab_back" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="@dimen/margin_72"
+        android:layout_height="@dimen/margin_72"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_37"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_13"
+        android:layout_marginTop="@dimen/margin_42"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:text="@string/marat_nurmamatov"
+        android:textColor="@color/label_black_100"
+        android:textSize="@dimen/size_18"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_13"
+        android:layout_marginTop="@dimen/margin_29"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:text="@string/marat_nurmamatov"
+        android:textColor="@color/label_black_100"
+        android:textSize="@dimen/size_18"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22"
+        android:layout_marginTop="@dimen/margin_41"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile">
+
+        <ImageView
+            android:id="@+id/iv_e_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile_mail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_e_mail"
+            style="@style/tv_profile_types"
+            android:layout_marginStart="@dimen/margin_22"
+            android:text="@string/manurmanatov_gmail_com"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_e_mail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_e_mail"
+            style="@style/tv_profile_types"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_22"
+            android:text="@string/manurmanatov_gmail_com"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_e_mail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons_layout_1">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/tv_profile_types"
+            android:layout_marginStart="@dimen/margin_22"
+            android:text="+996555555555"
+            app:layout_constraintStart_toEndOf="@id/iv_phone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/tv_profile_types"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_22"
+            android:text="+996555555555"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lin_layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons_layout_2">
+
+        <ImageView
+            android:id="@+id/iv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/tv_profile_types"
+            android:layout_marginStart="@dimen/margin_22"
+            android:text="@string/address"
+            app:layout_constraintStart_toEndOf="@id/iv_address"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_address"
+            style="@style/tv_profile_types"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_22"
+            android:text="@string/address"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_address"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_edited"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:layout_marginHorizontal="@dimen/margin_42"
+        android:layout_marginTop="@dimen/margin_35"
+        android:background="@color/yellow"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_16"
+        android:text="Вы изменили данные"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_16"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_accept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lin_layout_3"
+        tools:ignore="RtlSymmetry"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <Button
+        android:id="@+id/btn_edit_profile"
+        style="@style/btn_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_123"
+        android:background="@drawable/bg_btn_active"
+        android:text="@string/edit_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lin_layout_3" />
+
+    <Button
+        android:id="@+id/btn_edit"
+        style="@style/btn_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_123"
+        android:background="@drawable/bg_btn_active"
+        android:text="Применить"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lin_layout_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

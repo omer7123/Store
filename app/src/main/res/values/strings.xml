@@ -57,4 +57,12 @@
     <string name="email">Email</string>
     <string name="check_email">Вы успешно зарегестрировались, пожалуйста, проверьте почту</string>
     <string name="name">Имя</string>
+    <string name="my_account">Мой аккаунт</string>
+    <string name="profile">Профиль</string>
+    <string name="my_orders">Мои заказы</string>
+    <string name="address">Адрес</string>
+    <string name="order_details">Детали заказа</string>
+    <string name="edit_profile">Редактировать профииль</string>
+    <string name="marat_nurmamatov">Marat Nurmamatov</string>
+    <string name="manurmanatov_gmail_com">manurmanatov@gmail.com</string>
 </resources>

@@ -2,6 +2,7 @@ package com.ripalay.store.data.remote
 
 import com.ripalay.store.core.network.BaseDataSource
 import com.ripalay.store.data.remote.models.Register
+import com.ripalay.store.data.remote.models.User
 import org.koin.dsl.module
 
 val remoteDataSource = module {
@@ -30,7 +31,16 @@ class RemoteDataSource(private val storeApi: StoreApi) : BaseDataSource() {
         storeApi.getBrands()
     }
 
+    suspend fun getUser(token: String) = getResult {
+        storeApi.getUser(token)
+    }
+
+    suspend fun updateUser(token: String, userName: String, eMail: String) = getResult {
+        storeApi.updateUser(token, userName, eMail)
+        
+
     suspend fun getCapsBrand(name:String) = getResult {
         storeApi.getCapsBrand(name)
     }
+    
 }
