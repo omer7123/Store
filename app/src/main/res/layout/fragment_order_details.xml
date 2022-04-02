@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.order_details.OrderDetailsFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_back"
+        android:layout_width="@dimen/margin_44"
+        android:layout_height="@dimen/margin_44"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_74"
+        android:backgroundTint="@color/label_black_5"
+        android:elevation="@dimen/margin_0"
+        android:src="@drawable/ic_back"
+        app:borderWidth="@dimen/margin_0"
+        app:elevation="@dimen/margin_0"
+        app:fabCustomSize="@dimen/margin_44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_order_details"
+        style="@style/top_tv_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_21"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/order_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fab_back" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_lay_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90"
+        android:layout_marginHorizontal="@dimen/margin_22"
+        android:layout_marginTop="@dimen/margin_44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_details">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="@dimen/margin_88"
+            android:layout_height="@dimen/margin_88"
+            android:backgroundTint="@color/light_gray"
+            app:cardCornerRadius="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_product"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rel_lay_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_toEndOf="@id/card_view"
+            app:layout_constraintStart_toEndOf="@id/card_view"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display_bold"
+                android:text="@string/new_era"
+                android:textColor="@color/label_black_100"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_brand_name"
+                android:layout_marginTop="@dimen/margin_2"
+                android:fontFamily="@font/sf_ui_text_regular"
+                android:text="@string/golden_state_warriors_icon"
+                android:textColor="@color/label_black_100"
+                android:textSize="@dimen/size_12" />
+
+            <TextView
+                android:id="@+id/tv_product_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_product_name"
+                android:layout_marginTop="@dimen/margin_2"
+                android:fontFamily="@font/sf_ui_text_regular"
+                android:text="@string/_59fifty_fitted_cap"
+                android:textColor="@color/label_black_100"
+                android:textSize="@dimen/size_12" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/price"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/size_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_193"
+        android:layout_marginHorizontal="@dimen/margin_22"
+        android:layout_marginTop="@dimen/margin_43"
+        android:backgroundTint="@color/light_gray"
+        app:cardCornerRadius="@dimen/margin_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/const_lay_1">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_20"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="89475934"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_52"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="Дата:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_84"
+            android:fontFamily="@font/sf_ui_text_regular"
+            android:text="Статус:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_52"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="03.06.2021"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_84"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:text="В пути"
+            android:textColor="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

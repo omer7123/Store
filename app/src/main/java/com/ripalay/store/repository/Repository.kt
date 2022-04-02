@@ -21,7 +21,7 @@ class Repository(private val dataSource: RemoteDataSource) {
     }
 
     fun postRegister(
-        register: Register
+        register: Register,
     ): LiveData<Resource<Register>> = liveData(Dispatchers.IO) {
         emit(Resource.loading())
         val response = dataSource.postRegister(register)
@@ -34,10 +34,23 @@ class Repository(private val dataSource: RemoteDataSource) {
         emit(response)
     }
 
-    fun getBrands():LiveData<Resource<BrandsRemote>> = liveData(Dispatchers.IO){
+    fun getBrands(): LiveData<Resource<BrandsRemote>> = liveData(Dispatchers.IO) {
         emit(Resource.loading())
         val response = dataSource.getBrands()
         emit(response)
     }
+
+    fun getUser(token: String): LiveData<Resource<User>> = liveData(Dispatchers.IO) {
+        emit(Resource.loading())
+        val response = dataSource.getUser(token)
+        emit(response)
+    }
+
+    fun updateUser(token: String, userName: String, eMail: String): LiveData<Resource<User>> =
+        liveData(Dispatchers.IO) {
+            emit(Resource.loading())
+            val response = dataSource.updateUser(token, userName, eMail)
+            emit(response)
+        }
 
 }

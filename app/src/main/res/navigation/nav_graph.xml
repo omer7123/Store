@@ -54,7 +54,7 @@
         tools:layout="@layout/fragment_basket" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.ripalay.store.ui.profile_fragment.ProfileFragment"
+        android:name="com.ripalay.store.ui.profile.profile_fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
@@ -86,4 +86,19 @@
         android:id="@+id/notificationSignUpFragment"
         android:name="com.ripalay.store.ui.sign_up.NotificationSignUpFragment"
         android:label="NotificationSignUpFragment" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.ripalay.store.ui.profile.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.ripalay.store.ui.profile.orders.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.ripalay.store.ui.profile.order_details.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
 </navigation>

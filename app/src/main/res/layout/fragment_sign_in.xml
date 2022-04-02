@@ -61,7 +61,7 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/lin_layout_1"
+            android:id="@+id/cons_layout_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_sign_in_password"
@@ -89,10 +89,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lin_layout_2"
+            android:id="@+id/cons_layout_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lin_layout_1"
+            android:layout_below="@id/cons_layout_1"
             android:layout_marginHorizontal="@dimen/margin_33"
             android:layout_marginTop="@dimen/margin_26"
             android:orientation="horizontal"
@@ -119,7 +119,7 @@
         <Button
             android:id="@+id/btn_sign_in"
             style="@style/btn_light"
-            android:layout_below="@id/lin_layout_2"
+            android:layout_below="@id/cons_layout_2"
             android:layout_marginHorizontal="@dimen/margin_77"
             android:layout_marginTop="@dimen/margin_96"
             android:text="@string/sign_in" />

@@ -25,4 +25,16 @@ interface StoreApi {
 
     @GET("api/v1/caps/brand/")
     suspend fun getBrands(): Response<BrandsRemote>
+
+    @GET("/auth/users/me/")
+    suspend fun getUser(
+        @Header("Authorization") token: String
+    ): Response<User>
+
+    @PATCH("/auth/users/me/")
+    suspend fun updateUser(
+        @Header("Authorization") token: String,
+        @Field ("username") userName: String,
+        @Field("email") eMail: String
+    ): Response<User>
 }

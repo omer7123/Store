@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.content.ContentProviderCompat
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.ripalay.store.App
 import com.ripalay.store.R
+import com.ripalay.store.core.network.provideApi
 import com.ripalay.store.core.network.result.Status
 import com.ripalay.store.core.ui.BaseActivity
 import com.ripalay.store.databinding.ActivityMainBinding
@@ -47,6 +49,7 @@ class MainActivity : BaseActivity<SignInViewModel, ActivityMainBinding>() {
                         val prefs = Prefs(this)
                         val tokens: Tokens? = it.data
                         prefs.saveAccess(tokens?.access.toString())
+                        Log.e("Naima", tokens.toString())
                         navController.navigate(R.id.action_startFragment_to_homeFragment2)
                         viewModel.loading.postValue(false)
                     }
